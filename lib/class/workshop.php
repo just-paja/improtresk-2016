@@ -11,6 +11,7 @@ namespace
 			'lector'      => array("type" => 'varchar'),
 			'desc'        => array("type" => 'html', "length" => 65535),
 			'desc_lector' => array("type" => 'html', "default" => '', "length" => 65535),
+			'difficulty'  => array("type" => 'varchar', "default" => ''),
 			'visible'     => array("type" => 'bool', "default" => true),
 			'opened'   => array("type" => 'int', "default" => self::SEATS_OPENED),
 

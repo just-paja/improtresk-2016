@@ -6,7 +6,7 @@
 		"vendor-dir":"lib/vendor"
 	},
 	"require":{
-		"just-paja/fudjan":"^1.1.8",
+		"just-paja/fudjan":"^1.1.9",
 		"just-paja/fudjan-godmode": "^1.0"
 	}
 }

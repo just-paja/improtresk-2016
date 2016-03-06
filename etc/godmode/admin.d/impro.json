@@ -27,10 +27,22 @@
 
 	{
 		"title":"Workshopy",
-		"opts":{
-			"model":"Workshop",
-			"attrs_list":["name", "lector", "visible", "updated_at"]
-		}
+		"items":[
+			{
+				"title":"Workshopy",
+				"opts":{
+					"model":"Workshop",
+					"attrs_list":["name", "lector", "visible", "updated_at"]
+				}
+			},
+
+			{
+				"title":"Fotky",
+				"opts":{
+					"model":"Workshop.photo"
+				}
+			}
+		]
 	},
 
 	{
