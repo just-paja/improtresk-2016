@@ -1,0 +1,24 @@
+.container-fluid.workshops
+	.container
+		h1 Workshopy
+		.site-summary.comment
+			p Workshopy zatím připravujeme.
+
+	- foreach $items as $ws
+		.col-md-6.col-lg-4
+			.text-center
+				h3=$ws->name
+				.desc!=$ws->desc
+
+				h4=$ws->lector
+				.desc-lector!=$ws->desc_lector
+
+				:php
+					$photos = $ws->photos->fetch();
+
+				if $photos
+					ul.photos
+						- foreach $photos as $p
+							li
+								a.photo(href=$p->image->get_url())
+									img(src=$p->image->thumb(120, 120), alt=$p->desc)

@@ -1,25 +1,22 @@
-.signup
-	if $started
-		if $ended
-			.site-summary
-				.report Přihlašování je již uzavřeno
+.container
+	h1 Přihláška na Improtřesk 2016
+	.signup
+		if $started
+			if $ended
+				.site-summary
+					.report Přihlašování je již uzavřeno
+			else
+				.site-summary.sign
+					.form-signup
 		else
-			.site-summary.sign
-				.form-signup
-	else
-		.site-summary
-			.report Přihlašování se otevře #{$start_f}.
+			.site-summary
+				.report Přihlašování se otevře #{$start_f}.
 
 
-	.site-summary.read-info
-		.text
-			| Přečtěte si
-			if ! $started
-				&nbsp;zatím
-		.info
-			a(href=$ren->url('workshops')) Seznam workshopů
-
-	.site-summary.carshare
-		.text Máte místo v autě?
-		.info
-			a(href=$ren->url('carshare')) Nabídněte ho ostatním
+		.site-summary.read-info
+			.text
+				| Přečtěte si
+				if ! $started
+					&nbsp;zatím
+			.info
+				a(href=$ren->url('workshops')) Seznam workshopů
