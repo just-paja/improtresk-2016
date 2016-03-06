@@ -24,6 +24,7 @@
 
 				"bower/pwf-ui-calendar",
 
+				"bower/bootstrap/dist/js/bootstrap.min.js",
 				"scripts/ui",
 				"scripts/ctrl"
 			]
@@ -48,6 +49,7 @@
 
 			"archive-2016":[
 				"bower/bootstrap/dist/css/bootstrap.css",
+				"bower/bootstrap/dist/css/bootstrap-theme.css",
 				"styles/archive/2016"
 			]
 		}

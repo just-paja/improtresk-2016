@@ -81,8 +81,8 @@ namespace Module\Forms
 
 		public function run()
 		{
-			$start = new \DateTime("2016-02-13 20:00:00+01:00");
-			$end   = new \DateTime("2016-02-20 00:00:00+01:00");
+			$start = new \DateTime("2016-03-13 20:00:00+01:00");
+			$end   = new \DateTime("2016-05-12 00:00:00+01:00");
 			$now   = new \DateTime();
 
 			$started = $now > $start;

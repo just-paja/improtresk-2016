@@ -2,45 +2,55 @@
 	header
 		.container
 			.site-logo
-				h1.text Improtřesk
-				h2.subtitle!=$res->subtitle
+				h1.text
+			nav.navbar.navbar-default
+				.container-fluid
+					.navbar-header
+						button.navbar-toggle.collapsed(type="button", class="", data-toggle="collapse", data-target="#navbar")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
 
-			nav.navbar
-				.navbar-toggleable-sm#siteNav
-					ul.nav.navbar-nav
-						li.nav-item
-							a(href=$ren->url('home')) Domů
-						li.nav-item
-							a(href=$ren->url('info')) Pro účastníky
+						.navbar-brand
+							a(href="/") Improtřesk
 
-							menu.sub
-								li
-									a(href=$ren->url('workshops')) Workshopy
-								li
-									a(href=$ren->url('accommodation')) Ubytování
-								li
-									a(href=$ren->url('food')) Jídlo
-								li
-									a(href=$ren->url('fees')) Poplatky
-								li
-									a(href=$ren->url('tips')) Tipy
+					#navbar.navbar-collapse.collapse
+						ul.nav.navbar-nav
+							li.dropdown
+								a.dropdown-toggle(data-toggle="dropdown", role="button", href=$ren->url('info'))
+									| Pro účastníky
+									=" "
+									span.caret
 
-						li.nav-item
-							a(href=$ren->url('carshare')) Autem
-						li.nav-item
-							a(href=$ren->url('signup')) Přihláška
-						li.nav-item
-							a(href=$ren->url('schedule')) Program
-						li.nav-item
-							a(href=$ren->url('about')) O Improtřesku
+								ul.dropdown-menu
+									li
+										a(href=$ren->url('workshops')) Workshopy
+									li
+										a(href=$ren->url('accommodation')) Ubytování
+									li
+										a(href=$ren->url('food')) Jídlo
+									li
+										a(href=$ren->url('fees')) Poplatky
+									li
+										a(href=$ren->url('tips')) Tipy
 
-							menu.sub
-								li
-									a(href=$ren->url('faq')) Časté dotazy
-								li
-									a(href=$ren->url('orgs')) Organizátoři
-						li.nav-item
-							a(href=$ren->url('contact')) Kontakt
+							li.nav-item
+								a(href=$ren->url('signup')) Přihláška
+							li.nav-item
+								a(href=$ren->url('schedule')) Program
+							li.dropdown
+								a.dropdown-toggle(data-toggle="dropdown", role="button", href=$ren->url('about'))
+									| O Improtřesku
+									=" "
+									span.caret
+
+								ul.dropdown-menu
+									li
+										a(href=$ren->url('faq')) Časté dotazy
+									li
+										a(href=$ren->url('orgs')) Organizátoři
+							li.nav-item
+								a(href=$ren->url('contact')) Kontakt
 
 	.content
 		:php
