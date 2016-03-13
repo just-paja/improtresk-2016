@@ -146,6 +146,16 @@
 	},
 
 	{
+		"name":"location",
+		"url":"/misto",
+		"title":"Kde? - Improtřesk 2015",
+		"subtitle":"Kde bude Improtřesk?",
+		"modules":[
+			["system.partial", {"template":"pages/location"}]
+		]
+	},
+
+	{
 		"name":"schedule",
 		"url":"/program",
 		"title":"Program - Improtřesk 2015",
@@ -154,6 +164,7 @@
 			["system.partial", {"template":"pages/schedule"}]
 		]
 	},
+
 	{
 		"name":"timetable",
 		"url":"/program",
