@@ -1,6 +1,39 @@
+html {
+  background: #1D8000;
+  background: linear-gradient(to bottom, #1D8000 0%, #176800 100%);
+  height: 100%;
+}
+
 body {
+  background: transparent;
   min-width:400px;
-  margin-top:20px;
+  overflow-x:hidden;
+}
+
+.frontend {
+  background:#fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+}
+
+#bottom {
+  background: #f0f0f0;
+  padding-bottom: 20px;
+
+  nav li {
+    list-style: none;
+  }
+}
+
+a,
+a:visited {
+  color: #1D8000;
+
+  &.btn-primary {
+    background: #1D8000;
+    background: linear-gradient(to bottom, #1D8000 0%, #176800 100%);
+    color: #fff;
+  }
 }
 
 .cleaner {
@@ -10,4 +43,10 @@ body {
 
 img.tip {
   max-width:100%;
+}
+
+footer {
+  a, a:visited {
+    color: #fff;
+  }
 }

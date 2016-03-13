@@ -154,6 +154,15 @@
 			["system.partial", {"template":"pages/schedule"}]
 		]
 	},
+	{
+		"name":"timetable",
+		"url":"/program",
+		"title":"Program - Improtřesk 2015",
+		"subtitle":"Program",
+		"modules":[
+			["system.partial", {"template":"pages/schedule"}]
+		]
+	},
 
 	{
 		"name":"carshare",

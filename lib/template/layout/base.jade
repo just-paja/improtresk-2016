@@ -27,18 +27,44 @@ html(lang=$loc->get_lang())
       $ren->render_yield();
       $ren->slot();
 
-    hr
+    section#bottom
+      .container
+        .row
+          .col-xs-6.col-sm-4.text-xs-center.text-sm-left
+            h3 Informace
+
+            nav
+              li.nav-item
+                a(href=$ren->url('workshops')) Workshopy
+              li.nav-item
+                a(href=$ren->url('fees')) Poplatky
+              li.nav-item
+                a(href=$ren->url('accommodation')) Ubytování
+              li.nav-item
+                a(href=$ren->url('food')) Jídlo
+
+          .col-xs-6.col-sm-4.text-xs-center.text-sm-left
+            h3 Průběh
+
+            nav
+              li.nav-item
+                a(href=$ren->url('timetable')) Harmonogram
+              li.nav-item
+                a(href=$ren->url('schedule')) Večerní program
+
+
+          .col-xs-12.col-sm-4.text-xs-center.text-sm-left
+            h3 Archiv
+
+            nav
+              li.nav-item
+                a(href=$ren->url('home')) Hlavní strana
+              li.nav-item
+                a(href=$ren->url('year:2015')) Ročník 2015
 
     footer
       .container
-        .col-sm-6.text-xs-center.text-sm-left
-          h3 Archiv
-          nav
-            li.nav-item
-              a(href=$ren->url('home')) Hlavní strana
-            li.nav-item
-              a(href=$ren->url('year:2015')) Ročník 2015
-
+        .col-sm-6
         .col-sm-6
           .partners.text-xs-center.text-sm-right
             h3 Pořadatel
@@ -52,5 +78,6 @@ html(lang=$loc->get_lang())
                   span.name Česká improvizační liga
                   br
                   span.desc Hlavní pořadatel
+
 
     include ../partial/ga.jade
