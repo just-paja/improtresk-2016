@@ -1,0 +1,21 @@
+.container.workshops
+	.col-md-8
+		h1=$ws->name
+
+		strong=$ws->difficulty
+
+		.desc!=$ws->desc
+
+		h2=$ws->lector
+
+		.desc!=$ws->desc_lector
+
+	.col-md-4
+		ul.photos
+			:php
+				$photos = $ws->photos->fetch();
+
+			- foreach $photos as $p
+				li.col-md-6
+					a.photo(href=$p->image->get_url())
+						img(src=$p->image->thumb(240, 240), alt=$p->desc)

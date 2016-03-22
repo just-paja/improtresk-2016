@@ -1,24 +1,21 @@
-.container-fluid.workshops
+.container.workshops
 	.container
 		h1 Workshopy
 		.site-summary.comment
 			p Workshopy zatím připravujeme.
 
 	- foreach $items as $ws
-		.col-md-6.col-lg-4
-			.text-center
-				h3=$ws->name
-				.desc!=$ws->desc
-
-				h4=$ws->lector
-				.desc-lector!=$ws->desc_lector
-
-				:php
-					$photos = $ws->photos->fetch();
-
-				if $photos
-					ul.photos
-						- foreach $photos as $p
-							li
-								a.photo(href=$p->image->get_url())
-									img(src=$p->image->thumb(120, 120), alt=$p->desc)
+		.col-sm-6.col-md-4.col-lg-3
+			.workshop-item.text-center
+				.sheep-container
+					if $ws->id
+						a(href=$ren->url('workshop', array("workshop" => $ws->id)))
+							.sheep-ass
+								.sheep-ass-content
+									h4=$ws->lector
+									h3=$ws->name
+									p=$ws->difficulty
+					else
+						.sheep-ass
+							.sheep-ass-content
+								h3=$ws->name

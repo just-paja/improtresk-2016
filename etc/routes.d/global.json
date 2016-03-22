@@ -33,6 +33,16 @@
 	},
 
 	{
+		"name":"workshop",
+		"url":"/workshopy/{workshop:number}",
+		"title":"Workshopy - Improtřesk 2015",
+		"subtitle":"Workshopy",
+		"modules":[
+			["workshop.detail"]
+		]
+	},
+
+	{
 		"name":"accommodation",
 		"url":"/ubytovani",
 		"title":"Ubytování - Improtřesk 2015",
