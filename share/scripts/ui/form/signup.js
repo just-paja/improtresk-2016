@@ -10,7 +10,6 @@
 			"opts":{
 				'action':'/formulare/signup',
 				'model':'Workshop',
-				'heading':'Přihláška',
 				'sort':[
 					{
 						'attr':'name',
@@ -47,7 +46,8 @@
 				"elements":[
 					{
 						'element':'container',
-						'type':'inputs',
+						'type':'basic-info',
+						'heading':'Základní údaje',
 						'elements':[
 							{
 								'name':'submited',
@@ -79,7 +79,7 @@
 							{
 								'name':'team',
 								'type':'text',
-								'label':'Tým'
+								'label':'Skupina'
 							},
 
 							{
@@ -103,13 +103,26 @@
 								'type':'text',
 								'label':'Datum narození',
 								'required':true
-							},
-
+							}
+						]
+					},
+					{
+						'element':'container',
+						'type':'inputs',
+						'heading':'Volitelné',
+						'elements':[
 							{
 								'name':'lunch',
 								'type':'checkbox',
 								'label':'Chci obědy <span style="font-size:14px">+180 Kč</span>',
 								'desc':'Více o obědech se dočtete v <a href="/jidlo">sekci pro účastníky</a>'
+							},
+
+							{
+								'name':'hotel',
+								'type':'checkbox',
+								'label':'Chci ubytovat v hotelu <span style="font-size:14px">+600 Kč</span>',
+								'desc':'Za pár kaček můžeš spát v hotelu který je pár kroků od DK Milevsko. Více v <a href="/jidlo">sekci ubytování</a>'
 							}
 						]
 					},
@@ -199,9 +212,17 @@
 							},
 
 							{
+								'type':'checkbox',
+								'label':'Chci posílat informace o událostech Improligy',
+							},
+
+							{
 								'label':'Odeslat',
 								'element':'button',
-								'type':'submit'
+								'type':'submit',
+								'attrs':{
+									'class':'btn btn-primary',
+								}
 							}
 						]
 					}
@@ -232,7 +253,7 @@
 					}
 				}
 
-				var use = p.storage.opts.elements[1].elements;
+				var use = p.storage.opts.elements[2].elements;
 
 				for (var i = 0 ; i < use.length; i++) {
 					if (typeof use[i].model != 'undefined' && use[i].model == 'Workshop') {

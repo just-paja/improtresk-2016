@@ -156,6 +156,15 @@
 	},
 
 	{
+		"name":"terms",
+		"url":"/pro-ucastniky/podminky",
+		"title":"Podmínky pro účastníky - Improtřesk 2016",
+		"modules":[
+			["system.partial", {"template":"pages/terms"}]
+		]
+	},
+
+	{
 		"name":"location",
 		"url":"/misto",
 		"title":"Kde? - Improtřesk 2016",
