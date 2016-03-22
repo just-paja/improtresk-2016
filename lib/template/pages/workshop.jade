@@ -1,21 +1,25 @@
 .container.workshops
-	.col-md-8
-		h1=$ws->name
+	.row
+		.col-md-8
+			h1=$ws->name
 
-		strong=$ws->difficulty
+			strong=$ws->difficulty
 
-		.desc!=$ws->desc
+			.desc!=$ws->desc
 
-		h2=$ws->lector
+			h2=$ws->lector
 
-		.desc!=$ws->desc_lector
+			.desc!=$ws->desc_lector
 
-	.col-md-4
-		ul.photos
-			:php
-				$photos = $ws->photos->fetch();
+		.col-md-4
+			ul.photos
+				:php
+					$photos = $ws->photos->fetch();
 
-			- foreach $photos as $p
-				li.col-md-6
-					a.photo(href=$p->image->get_url())
-						img(src=$p->image->thumb(240, 240), alt=$p->desc)
+				- foreach $photos as $p
+					li.col-md-6
+						a.photo(href=$p->image->get_url())
+							img(src=$p->image->thumb(240, 240), alt=$p->desc)
+
+	hr
+	a.btn.btn-primary.btn-lg(href=$ren->url('signup')) Přihlásit se na workshop
