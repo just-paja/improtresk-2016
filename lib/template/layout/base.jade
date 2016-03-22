@@ -31,6 +31,16 @@ html(lang=$loc->get_lang())
       .container
         .row
           .col-xs-6.col-sm-4.text-xs-center.text-sm-left
+            h3 Průběh
+
+            nav
+              li.nav-item
+                a(href=$ren->url('timetable')) Harmonogram
+              li.nav-item
+                a(href=$ren->url('schedule')) Večerní program
+
+
+          .col-xs-6.col-sm-4.text-xs-center.text-sm-left
             h3 Informace
 
             nav
@@ -42,16 +52,6 @@ html(lang=$loc->get_lang())
                 a(href=$ren->url('accommodation')) Ubytování
               li.nav-item
                 a(href=$ren->url('food')) Jídlo
-
-          .col-xs-6.col-sm-4.text-xs-center.text-sm-left
-            h3 Průběh
-
-            nav
-              li.nav-item
-                a(href=$ren->url('timetable')) Harmonogram
-              li.nav-item
-                a(href=$ren->url('schedule')) Večerní program
-
 
           .col-xs-12.col-sm-4.text-xs-center.text-sm-left
             h3 Archiv
@@ -65,6 +65,8 @@ html(lang=$loc->get_lang())
     footer
       .container
         .col-sm-6
+          .sheep-left
+            .sheep-jump
         .col-sm-6
           .partners.text-xs-center.text-sm-right
             h3 Pořadatel
