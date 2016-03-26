@@ -65,20 +65,31 @@
 				"solved"
 			],
 
-			"attrs_list":["name_first", "name_last", "team", "check", "assigned_to", "lunch", "paid", "solved", "created_at"],
+			"attrs_list":["name_first", "name_last", "team", "check", "assigned_to", "lunch", "hotel", "paid", "solved", "created_at"],
 			"attrs_info":["id", "name_first", "name_last", "team", "email", "phone", "lunch", "paid", "solved", "assigned_to", "check", "workshops", "created_at"],
-			"attrs_edit":["team", "email", "phone", "lunch", "solved", "assigned_to"]
+			"attrs_edit":["team", "email", "phone", "lunch", "hotel", "solved", "assigned_to"]
 		}
 	},
 
 	{
-		"title":"Přijaté platby",
-		"opts":{
-			"model":"Workshop.Payment",
+		"title":"Platby",
+		"items":[
+			{
+				"title":"Očekávané platby",
+				"opts":{
+					"model":"Workshop.Check"
+				}
+			},
+			{
+				"title":"Přijaté platby",
+				"opts":{
+					"model":"Workshop.Payment",
 
-			"attrs_list":["bank", "from", "amount", "currency", "symvar", "received", "created_at"],
-			"attrs_edit":["symvar", "received", "check"]
-		}
+					"attrs_list":["bank", "from", "amount", "currency", "symvar", "received", "created_at"],
+					"attrs_edit":["symvar", "received", "check"]
+				}
+			}
+		]
 	},
 
 	{

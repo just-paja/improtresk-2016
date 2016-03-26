@@ -202,12 +202,14 @@
 						'elements':[
 							{
 								'type':'checkbox',
+								'name':'rules',
 								'label':'Souhlasím s <a href="/pro-ucastniky/podminky">podmínkami pro účastníky</a>',
 								'required':true
 							},
 
 							{
 								'type':'checkbox',
+								'name':'newsletter',
 								'label':'Chci posílat informace o událostech Improligy',
 							},
 

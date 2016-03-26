@@ -57,6 +57,12 @@ namespace Module\Forms
 			));
 
 			$f->input(array(
+				'name' => 'hotel',
+				'type' => 'checkbox',
+				'required' => false
+			));
+
+			$f->input(array(
 				'name' => 'workshop_0',
 				'type' => 'select',
 				'options' => $opts,
@@ -75,6 +81,17 @@ namespace Module\Forms
 				'options' => $opts,
 			));
 
+			$f->input(array(
+				'name' => 'rules',
+				'type' => 'checkbox',
+				'required' => true
+			));
+
+			$f->input(array(
+				'name' => 'newsletter',
+				'type' => 'checkbox',
+				'required' => false
+			));
 			return $f;
 		}
 

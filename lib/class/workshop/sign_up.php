@@ -12,7 +12,6 @@ namespace Workshop
 
 		const DEADLINE_DISCOUNT = '2016-04-01';
 
-
 		protected static $prices_cancel = array(
 			array(
 				"after" => '2016-01-01',
@@ -40,7 +39,9 @@ namespace Workshop
 			'birthday'   => array("type" => 'varchar'),
 
 			'lunch'      => array("type" => 'bool'),
-			'accomodation' => array("type" => 'bool'),
+			'hotel' => array("type" => 'bool'),
+			'newsletter' => array("type" => 'bool'),
+			'rules' => array("type" => 'bool'),
 			'paid'       => array("type" => 'bool'),
 			'solved'     => array("type" => 'bool'),
 
@@ -179,7 +180,7 @@ namespace Workshop
 				$price += self::PRICE_LUNCH;
 			}
 
-			if ($this->accomodation) {
+			if ($this->hotel) {
 				$price += self::PRICE_ACCOMODATION;
 			}
 
