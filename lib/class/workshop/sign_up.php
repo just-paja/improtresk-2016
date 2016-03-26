@@ -45,6 +45,7 @@ namespace Workshop
 			'paid'       => array("type" => 'bool'),
 			'solved'     => array("type" => 'bool'),
 
+			'sent_confirm' => array("type" => 'bool', "default" => false),
 			'sent_general' => array("type" => 'bool', "default" => false),
 			'sent_lunch'   => array("type" => 'bool', "default" => false),
 			'sent_match'   => array("type" => 'bool', "default" => false),
@@ -218,7 +219,7 @@ namespace Workshop
 
 			$mail->send();
 
-			$this->sent_notif = true;
+			$this->sent_confirm = true;
 			$this->save();
 		}
 

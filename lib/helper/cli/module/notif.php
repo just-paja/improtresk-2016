@@ -33,13 +33,14 @@ namespace Helper\Cli\Module
 
 			$signups = \Workshop\SignUp::get_all()
 				->where(array(
-					"sent_notif" => false,
+					"sent_confirm" => false,
 					"solved" => false,
 				))
 				->fetch();
 
 			\Helper\Cli::do_over($signups, function($key, $signup) {
-				$signup->mail_confirm();
+				$res = new \System\Http\Response();
+				$signup->mail_confirm($res);
 			});
 		}
 
