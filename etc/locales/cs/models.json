@@ -1,0 +1,82 @@
+{
+	"model-Car.Offer":"Auto",
+	"model-Car.Offer-plural":"Auta",
+
+	"model-Car.Offer-attr-desc":"Zpráva",
+	"model-Car.Offer-attr-driver":"Řidič",
+	"model-Car.Offer-attr-from":"Z",
+	"model-Car.Offer-attr-color":"Barva",
+	"model-Car.Offer-attr-departure":"Čas odjezdu",
+	"model-Car.Offer-attr-phone":"Telefon",
+	"model-Car.Offer-attr-email":"E-mail",
+	"model-Car.Offer-attr-requests":"Pasažéři",
+
+
+	"model-Workshop":"Workshop",
+	"model-Workshop-plural":"Workshopy",
+
+	"model-Workshop-attr-lector":"Lektor",
+	"model-Workshop-attr-desc":"Anotace",
+	"model-Workshop-attr-desc_lector":"Anotace lektora",
+	"model-Workshop-attr-opened":"Otevřená místa",
+	"model-Workshop-attr-photos":"Fotky",
+	"model-Workshop-attr-assignees":"Účastníci",
+	"model-Workshop-attr-signups":"Přihlášky",
+
+
+	"model-Workshop.SignUp":"Přihláška",
+	"model-Workshop.SignUp-plural":"Přihlášky",
+
+	"model-Workshop.SignUp-attr-assigned_to":"Workshop",
+	"model-Workshop.SignUp-attr-name_first":"Jméno",
+	"model-Workshop.SignUp-attr-name_last":"Příjmení",
+	"model-Workshop.SignUp-attr-team":"Tým",
+	"model-Workshop.SignUp-attr-email":"E-mail",
+	"model-Workshop.SignUp-attr-phone":"Telefon",
+	"model-Workshop.SignUp-attr-check":"Účtenka",
+	"model-Workshop.SignUp-attr-workshops":"Vybrané workshopy",
+	"model-Workshop.SignUp-attr-workshop_assigned":"Přidělený workshop",
+	"model-Workshop.SignUp-attr-lunch":"Obědy",
+	"model-Workshop.SignUp-attr-paid":"Zaplaceno",
+	"model-Workshop.SignUp-attr-solved":"Vyřízeno",
+	"model-Workshop.SignUp-attr-solved-desc":"Pokud je zaškrtnuto, budou se uživateli posílat e-maily o manuálních změnách vybraného workshopu.",
+
+
+	"model-Workshop.Check":"Účtenka",
+	"model-Workshop.Check-plural":"Účtenky",
+
+	"model-Workshop.Check-attr-currency":"Měna",
+	"model-Workshop.Check-attr-symvar":"Variabilní symbol",
+	"model-Workshop.Check-attr-amount":"Částka",
+	"model-Workshop.Check-attr-is_paid":"Zaplaceno",
+	"model-Workshop.Check-attr-is_over":"Přeplatek",
+	"model-Workshop.Check-attr-paid_on":"Datum zaplacení",
+	"model-Workshop.Check-attr-signup":"Přihláška",
+	"model-Workshop.Check-attr-payments":"Spárované platby",
+
+
+	"model-Workshop.Payment":"Přijatá platba",
+	"model-Workshop.Payment-plural":"Přijaté platby",
+
+	"model-Workshop.Payment-attr-currency":"Měna",
+	"model-Workshop.Payment-attr-symvar":"Variabilní symbol",
+	"model-Workshop.Payment-attr-symcon":"Konstantní symbol",
+	"model-Workshop.Payment-attr-symspc":"Specifický symbol",
+	"model-Workshop.Payment-attr-from":"Číslo protiúčtu",
+	"model-Workshop.Payment-attr-bank":"Banka protiúčtu",
+	"model-Workshop.Payment-attr-message":"Zpráva",
+	"model-Workshop.Payment-attr-received":"Přijato bankou",
+	"model-Workshop.Payment-attr-amount":"Částka",
+	"model-Workshop.Payment-attr-check":"Účtenka",
+
+	"model-Survey.TeamAnswer":"Odpověď",
+	"model-Survey.TeamAnswer-plural":"Odpovědi",
+	"model-Survey.TeamAnswer-attr-response":"Odpověď",
+	"model-Survey.TeamAnswer-attr-signup":"Přihláška",
+
+	"model-Conference.Topic":"Téma konference",
+	"model-Conference.Topic-plural":"Témata konference",
+	"model-Conference.Topic-attr-topic":"Téma",
+	"model-Conference.Topic-attr-name":"Garant",
+	"model-Conference.Topic-attr-banned":"Zakázáno"
+}
