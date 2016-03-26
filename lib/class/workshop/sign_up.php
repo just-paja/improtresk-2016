@@ -156,7 +156,7 @@ namespace Workshop
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
 				'subject'  => 'Improtřesk 2015 - Přihláška, zařazení na workshop',
-				'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
+				'reply_to' => \System\Settings::getSafe(array('offcom', 'default', 'reply_to'), null),
 				'message'  => $ren->render_content()
 			));
 
@@ -205,7 +205,7 @@ namespace Workshop
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
 				'subject'  => 'Improtřesk 2015 - Potvrzení přihlášky',
-				'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
+				'reply_to' => \System\Settings::getSafe(array('offcom', 'default', 'reply_to'), null),
 				'message'  => $ren->render_content()
 			));
 
@@ -252,7 +252,7 @@ namespace Workshop
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
 				'subject'  => 'Improtřesk 2015 - Přihláška, platební aktualizace',
-				'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
+				'reply_to' => \System\Settings::getSafe(array('offcom', 'default', 'reply_to'), null),
 				'message'  => $ren->render_content()
 			));
 

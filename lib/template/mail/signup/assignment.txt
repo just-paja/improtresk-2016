@@ -1,0 +1,27 @@
+Ahoj,
+
+<? if ($op == 'assigned') { ?>
+na základě preferencí v tvojí přihlášce jsme tě přiřadili na workshop <?=$ws->name?>, který vede <?=$ws->lector?>.
+<? } else if ($op == 'reassigned') { ?>
+přeřadili jsme tě z workshopu <?=$prev->name?> na workshop <?=$ws->name?>, který vede <?=$ws->lector?>.
+<? } else if ($op == 'removed') { ?>
+vyřadili jsme tě z workshopu <?=$prev->name?>, který vede <?=$prev->lector?>.
+<? } ?>
+
+<? if ($op != 'removed') { ?>
+Tvoje preference z přihlášky:
+<?
+	$x = 0;
+	foreach ($pref as $w) {
+?>
+	<?=++$x?>. <?=$w->name?> (<?=$w->lector?>)
+<?
+	}
+}
+
+?>
+Kdyby došlo k jakékoliv nesrovnalosti, neváhej nás prosím okamžitě kontaktovat.
+
+Organizační tým Improtřesku 2015
+http://improtresk.cz
+improtresk@improliga.cz

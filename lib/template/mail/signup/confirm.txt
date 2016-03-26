@@ -1,0 +1,36 @@
+Ahoj,
+
+přijali jsme tvojí přihlášku na Improtřesk 2015. Zde je rekapitulace:
+
+Jméno: <?=$item->name_first?> <?=$item->name_last?>
+
+Telefon: <?=$item->phone?>
+
+E-mail: <?=$item->email?>
+
+Obědy: <?=$item->lunch ? 'Ano':'Ne'?>
+
+Workshopy: <?
+	$name = array();
+	$x = 1;
+
+	foreach ($workshops as $ws) {
+		$name[] = '(' . ($x++) . ') ' .$ws->name;
+	}
+
+	echo implode(', ', $name);
+?>
+
+
+Po uhrazení účastnického poplatku budete přiřazen na workshop. O přijetí platby tě budeme informovat automatickým e-mailem. Detaily platby jsou níže.
+
+Účet: 2800754192/2010
+Částka: <?= $check->amount ?> Kč
+Variabilní symbol: <?= $check->symvar ?>
+
+Do zprávy prosím uveď pro kontrolu svoje jméno.
+
+Organizační tým Improtřesku 2015
+<?=$res->request->protocol?>://<?=$res->request->host?>
+
+improtresk@improliga.cz

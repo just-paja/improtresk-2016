@@ -1,0 +1,54 @@
+Ahoj,
+
+dorazila nám na účet od tebe platba. Posíláme ti touto cestou aktualizaci tvojí přihlášky na Improtřesk 2015.
+
+<?
+if ($check->is_paid) {
+?>
+Hurá, tvoje přihláška je zaplacena. V tento okamžik jsi byl(a) zařazen(a) do fronty na workshop podle tvých preferencí. Zařazování na workshopy probíhá manuálně - někde u počítače sedí člověk, který potvrzuje kdo kam půjde. Může to tedy chvíli trvat. Jakmile tě zařadíme, okamžitě se ti ozveme.
+<?
+} else {
+?>
+Přihláška stále není zaplacena, chybí nám od tebe <?=$check->amount - $paid?> Kč. Pošli je prosím na náš účet bankovním převodem.
+
+Účet: 2800754192/2010
+Částka: <?=$check->amount - $paid?> Kč
+Variabilní symbol: <?= $check->symvar ?>
+
+Do zprávy prosím uveď pro kontrolu svoje jméno.
+<?
+}
+?>
+
+Celkem zaplaceno: <?=$paid?> Kč
+
+<?
+if (any($payments)) {
+?>
+Spárované platby:
+
+<?
+	foreach ($payments as $p) {
+?>
+	Částka: <?=$p->amount?> Kč
+	Číslo účtu: <?=$p->from?>/<?=$p->bank?>
+
+	Variabilní symbol: <?=$p->symvar?>
+
+<? if ($p->received) { ?>
+	Přijato bankou: <?=$p->received->format('Y-m-d')?>
+
+<? } ?>
+	Zpracováno: <?=$p->created_at->format('Y-m-d H:i:s')?>
+
+	-----
+
+<?
+	}
+}
+?>
+Kdyby došlo k jakékoliv nesrovnalosti, neváhej nás prosím okamžitě kontaktovat.
+
+Organizační tým Improtřesku 2015
+http://improtresk.cz
+improtresk@improliga.cz
