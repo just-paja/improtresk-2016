@@ -10,3 +10,240 @@
 .results-mini {
   max-width:400px;
 }
+
+
+.stats {
+  ul, li {
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+
+
+	&.teams {
+		margin:0 auto;
+		width:420px;
+	}
+
+	&.non-payers {
+		margin:0 auto;
+		width:500px;
+
+		p {
+			text-align:justify;
+		}
+	}
+
+	.ws {
+		margin-bottom:25px;
+
+		&:last-child {
+			margin:0;
+		}
+	}
+
+	.ws-info {
+		font-size:24px;
+		line-height:28px;
+		margin-bottom:0;
+
+		span {
+			margin-right:10px;
+
+			&:last-child {
+				margin:0;
+			}
+		}
+
+		.ws-name {
+			text-transform:uppercase;
+		}
+	}
+
+	.ws-lector {
+		color:#fff;
+		margin-bottom:8px;
+
+		&:last-child {
+			margin:0;
+		}
+	}
+
+	.ws-members {
+		padding-left:25px;
+
+		li {
+			list-style:decimal outside;
+		}
+	}
+
+	.pc-list {
+		margin:0 auto;
+		width:420px;
+
+		.pc {
+			border-bottom:1px solid transparent;
+			line-height:24px;
+
+			&:hover {
+				border-color:rgba(255,255,255,.25);
+			}
+		}
+
+		.header {
+			border-bottom:1px solid rgba(255,255,255,.25);
+			margin-bottom:5px;
+			padding-bottom:5px;
+		}
+
+		.pc-name,
+		.pc-amount,
+		.pc-created
+		{
+			display:inline-block;
+			vertical-align:top;
+		}
+
+		.pc-name {
+			width:180px;
+		}
+
+		.pc-amount {
+			color:#fff;
+			text-align:right;
+			width:80px;
+		}
+
+		.pc-created {
+			text-align:right;
+			width:160px;
+		}
+	}
+}
+
+
+.stat-list {
+	.stat {
+		.name,
+		.value
+		{
+			display:inline-block;
+		}
+
+		.name {
+			font-size:18px;
+			text-align:left;
+			width:300px;
+		}
+
+		.value {
+			text-align:right;
+			width:50px;
+
+			&.big {
+				padding-right:20px;
+				width:100px;
+
+				&.unit {
+					padding-right:0;
+					width:120px;
+				}
+			}
+
+			&.light {
+				opacity:.5;
+			}
+
+			.unit {
+				display:inline-block;
+				text-align:left;
+				width:18px;
+			}
+		}
+	}
+}
+
+.meal-stats {
+	.day {
+		border-bottom:1px solid rgba(255,255,255,.25);
+		margin-bottom:20px;
+		padding-bottom:10px;
+
+		&:last-child {
+			border:none;
+			margin-bottom:0;
+			padding-bottom:0;
+		}
+
+		.day-date {
+			font-size:32px;
+			margin-bottom:20px;
+		}
+
+		.stat {
+			.name,
+			.type,
+			.value
+			{
+				display:inline-block;
+				font-size:18px;
+				text-align:left;
+				vertical-align:top;
+			}
+
+			.name {
+				width:320px
+			}
+
+			.type {
+				width:80px;
+			}
+
+			.value {
+				width:30px;
+				text-align:right;
+			}
+		}
+	}
+
+	&.meal-participants {
+		width:auto;
+
+		.day-items {
+			margin:0 auto;
+		}
+
+		.day-list {
+			width:auto;
+		}
+
+		.day .stat {
+			.name {
+				width:140px;
+			}
+
+			.value {
+				width:400px;
+			}
+		}
+	}
+}
+
+.stats.teams {
+	.pc-list {
+		margin:0 auto;
+		width:300px;
+	}
+}
+
+.stats-workshops {
+	text-align:center;
+
+	.ws {
+		display:inline-block;
+		padding:20px;
+		text-align:left;
+		vertical-align:top;
+		width:250px;
+	}
+}
