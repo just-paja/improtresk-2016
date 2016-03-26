@@ -19,11 +19,29 @@ namespace Helper\Cli\Module
 
 
 		protected static $commands = array(
+			"confirm" => array('Send confirmation to unconfirmed'),
 			"general" => array('Send notification containing general information'),
 			"lunch"   => array('Send notification about lunch picker'),
 			"match"   => array('Send notification about match survey'),
 			"camp"    => array('Send notification about summer impro camp 2015'),
 		);
+
+
+		public function cmd_confirm()
+		{
+			\System\Init::full();
+
+			$signups = \Workshop\SignUp::get_all()
+				->where(array(
+					"sent_notif" => false,
+					"solved" => false,
+				))
+				->fetch();
+
+			\Helper\Cli::do_over($signups, function($key, $signup) {
+				$signup->mail_confirm();
+			});
+		}
 
 
 		public function cmd_lunch()
