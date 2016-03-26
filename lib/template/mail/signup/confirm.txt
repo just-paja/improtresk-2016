@@ -1,6 +1,6 @@
 Ahoj,
 
-přijali jsme tvojí přihlášku na Improtřesk 2015. Zde je rekapitulace:
+přijali jsme tvojí přihlášku na Improtřesk 2016. Zde je rekapitulace:
 
 Jméno: <?=$item->name_first?> <?=$item->name_last?>
 
@@ -33,4 +33,4 @@ Do zprávy prosím uveď pro kontrolu svoje jméno.
 Organizační tým Improtřesku 2015
 <?=$res->request->protocol?>://<?=$res->request->host?>
 
-improtresk@improliga.cz
+info@improtresk.cz

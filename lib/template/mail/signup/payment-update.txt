@@ -1,6 +1,6 @@
 Ahoj,
 
-dorazila nám na účet od tebe platba. Posíláme ti touto cestou aktualizaci tvojí přihlášky na Improtřesk 2015.
+dorazila nám na účet od tebe platba. Posíláme ti touto cestou aktualizaci tvojí přihlášky na Improtřesk 2016.
 
 <?
 if ($check->is_paid) {
@@ -49,6 +49,6 @@ Spárované platby:
 ?>
 Kdyby došlo k jakékoliv nesrovnalosti, neváhej nás prosím okamžitě kontaktovat.
 
-Organizační tým Improtřesku 2015
+Organizační tým Improtřesku 2016
 http://improtresk.cz
-improtresk@improliga.cz
+info@improtresk.cz
