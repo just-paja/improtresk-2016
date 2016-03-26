@@ -56,24 +56,19 @@
 							},
 
 							{
-								'element':'container',
-								'type':'name',
-								'elements':[
-									{
-										'name':'name_first',
-										'type':'text',
-										'label':'Jméno',
-										'placeholder':'Křestní',
-										'required':true
-									},
+								'name':'name_first',
+								'type':'text',
+								'label':'Jméno',
+								'placeholder':'Křestní jméno',
+								'required':true
+							},
 
-									{
-										'name':'name_last',
-										'type':'text',
-										'placeholder':'Příjmení',
-										'required':true
-									}
-								]
+							{
+								'name':'name_last',
+								'type':'text',
+								'label':'Příjmení',
+								'placeholder':'Příjmení',
+								'required':true
 							},
 
 							{
@@ -207,7 +202,7 @@
 						'elements':[
 							{
 								'type':'checkbox',
-								'label':'Souhlasím s <a href="/pro-ucastniky">podmínkami pro účastníky</a>',
+								'label':'Souhlasím s <a href="/pro-ucastniky/podminky">podmínkami pro účastníky</a>',
 								'required':true
 							},
 

@@ -1,22 +1,27 @@
 .container
 	h1 Přihláška na Improtřesk 2016
 	.signup
-		if $started
-			if $ended
-				.site-summary
-					.report Přihlašování je již uzavřeno
-			else
-				.site-summary.sign
-					.form-signup
-		else
-			.site-summary
-				.report Přihlašování se otevře #{$start_f}.
+		.row
+			.col-md-6
+				if $started
+					if $ended
+						.site-summary
+							.report Přihlašování je již uzavřeno
+					else
+						.site-summary.sign
+							.form-signup
+				else
+					.site-summary
+						.report Přihlašování se otevře #{$start_f}.
 
 
-		.site-summary.read-info
-			.text
-				| Přečtěte si
-				if ! $started
-					&nbsp;zatím
-			.info
-				a(href=$ren->url('workshops')) Seznam workshopů
+				.site-summary.read-info
+					.text
+						| Přečtěte si
+						if ! $started
+							&nbsp;zatím
+					.info
+						a(href=$ren->url('workshops')) Seznam workshopů
+
+			.col-md-6
+				be
