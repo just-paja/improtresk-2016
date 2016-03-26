@@ -8,23 +8,24 @@ namespace Workshop
 		const PRICE_DISCOUNT = 1200;
 		const PRICE_FULL     = 1400;
 		const PRICE_LUNCH    = 180;
+		const PRICE_ACCOMODATION = 600;
 
-		const DEADLINE_DISCOUNT = '2015-04-01';
+		const DEADLINE_DISCOUNT = '2016-04-01';
 
 
 		protected static $prices_cancel = array(
 			array(
-				"after" => '2015-01-01',
+				"after" => '2016-01-01',
 				"price" => .2
 			),
 
 			array(
-				"after" => '2015-04-08',
+				"after" => '2016-04-08',
 				"price" => .8
 			),
 
 			array(
-				"after" => '2015-04-23',
+				"after" => '2016-05-01',
 				"price" => .8
 			),
 		);
@@ -39,6 +40,7 @@ namespace Workshop
 			'birthday'   => array("type" => 'varchar'),
 
 			'lunch'      => array("type" => 'bool'),
+			'accomodation' => array("type" => 'bool'),
 			'paid'       => array("type" => 'bool'),
 			'solved'     => array("type" => 'bool'),
 
@@ -155,7 +157,7 @@ namespace Workshop
 
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
-				'subject'  => 'Improtřesk 2015 - Přihláška, zařazení na workshop',
+				'subject'  => 'Improtřesk 2016 - Přihláška, zařazení na workshop',
 				'reply_to' => \System\Settings::getSafe(array('offcom', 'default', 'reply_to'), null),
 				'message'  => $ren->render_content()
 			));
@@ -175,6 +177,10 @@ namespace Workshop
 
 			if ($this->lunch) {
 				$price += self::PRICE_LUNCH;
+			}
+
+			if ($this->accomodation) {
+				$price += self::PRICE_ACCOMODATION;
 			}
 
 			return $price;
@@ -204,7 +210,7 @@ namespace Workshop
 
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
-				'subject'  => 'Improtřesk 2015 - Potvrzení přihlášky',
+				'subject'  => 'Improtřesk 2016 - Potvrzení přihlášky',
 				'reply_to' => \System\Settings::getSafe(array('offcom', 'default', 'reply_to'), null),
 				'message'  => $ren->render_content()
 			));
@@ -251,7 +257,7 @@ namespace Workshop
 
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
-				'subject'  => 'Improtřesk 2015 - Přihláška, platební aktualizace',
+				'subject'  => 'Improtřesk 2016 - Přihláška, platební aktualizace',
 				'reply_to' => \System\Settings::getSafe(array('offcom', 'default', 'reply_to'), null),
 				'message'  => $ren->render_content()
 			));
