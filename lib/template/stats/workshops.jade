@@ -1,0 +1,15 @@
+.container.stats
+	ul.ws-list
+		- foreach $workshops as $ws
+			li.ws
+				.ws-info.heading
+					span.ws-name=$ws->name
+					span.ws-total='('.$ws->ass_total.')'
+
+				.ws-lector=$ws->lector
+
+				if count($ws->ass_all) > 0
+					ol.ws-members
+						- foreach $ws->ass_all as $ass
+							li
+								span.ass-name=$ass->name_first.' '.$ass->name_last

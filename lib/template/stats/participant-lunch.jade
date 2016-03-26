@@ -1,0 +1,12 @@
+.container.stats.meal-stats.meal-participants
+	.site-summary.day-list
+		ul
+			- foreach $days as $day
+				li.day
+					.day-date=$day['date']
+					table.day-items
+
+						- foreach $day['items'] as $item
+							tr.stat
+								td.name=$item['person']->name_first. " " . $item['person']->name_last
+								td.value=$item['food']->name

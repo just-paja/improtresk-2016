@@ -1,0 +1,18 @@
+.container.stats.non-payers
+	p Pokud se vidíš na tomto seznamu, dlužíš nám ještě nějaké peníze. To znamená, že nejsi na žádném workshopu napsaný. Jsme sice kamarádi, ale kdo nezaplatí, tak nejede. Pokud víš, že sem nepatříš, tak nás prosím <a href="#{$ren->url('contact')}">kontaktuj</a> a dáme věci do pořádku.
+
+	ul.pc-list
+		li.pc.header
+			.pc-name Jméno
+			.pc-amount Částka
+			.pc-created Zadáno
+
+		- foreach $items as $item
+			li.pc
+				.pc-name
+					span.pc-name-first=$item->name_first
+					&nbsp;
+					span.pc-name-last=$item->name_last
+
+				.pc-amount!=$item->check->amount.'&nbsp;Kč'
+				.pc-created!=$item->check->created_at->format('j. n. Y H:i:s')

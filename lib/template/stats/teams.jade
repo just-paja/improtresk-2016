@@ -1,0 +1,12 @@
+.container.stats.teams
+	p Který tým zásobuje Improtřesk čerstvým masem nejvíce?
+
+	ul.pc-list
+		li.pc.header
+			.pc-name Tým
+			.pc-amount Počet
+
+		- foreach $items as $item
+			li.pc
+				.pc-name=$item['team']
+				.pc-amount=$item['total']

@@ -1,0 +1,13 @@
+.container.stats.meal-stats
+	.site-summary.day-list
+		ul
+			- foreach $days as $day
+				li.day
+					.day-date=$day['date']->format('j. n.')
+					ul.day-items
+
+						- foreach $day['items'] as $item
+							li.stat
+								.type=$item->type_label
+								.name=$item->name
+								.value=$item->total

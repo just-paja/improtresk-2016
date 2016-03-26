@@ -1,0 +1,12 @@
+.container.stats.teams
+	p Kdo by měl hrát na Improtřesku?
+
+	ul.pc-list
+		li.pc.header
+			.pc-name Tým
+			.pc-amount Počet hlasů
+
+		- foreach $results as $item
+			li.pc
+				.pc-name=$item['name']
+				.pc-amount=$item['total']

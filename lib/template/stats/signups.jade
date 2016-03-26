@@ -1,0 +1,52 @@
+.container.stats
+	.site-summary.stat-list
+		p Toto je malý přehled celkového stavu přihlášek a plateb.
+
+		.stat
+			.name Celkem přihlášek
+			.value.big=$stats['total']
+
+		.stat
+			.name Nezaplacené přihlášky
+			.value.big=$stats['unpaid']
+
+		.stat
+			.name Zaplacené přihlášky
+			.value.big=$stats['paid']
+
+		.stat
+			.name Čekající na zařazení
+			.value.big=$stats['waiting']
+
+		.stat
+			.name Vyřízené přihlášky
+			.value.big=$stats['solved']
+
+		.stat
+			.name Přijatých plateb
+			.value.big=$stats['received_cnt']
+
+		.stat
+			.name Očekávano plateb
+			.value.big=$stats['expected_cnt']
+
+		.stat
+			.name Objednat obědů
+			.value.big=$stats['meals']
+
+		.stat
+			.name Přijato peněz
+			.value.unit.big!=$stats['received_sum'].' <span class="unit">Kč</span>'
+
+		.stat
+			.name Očekávano peněz
+			.value.unit.big!=$stats['expected_sum'].' <span class="unit">Kč</span>'
+
+	.site-summary.stat-list
+		p Zde je počet přihlášek a účinkujících na workshopech. První číslo jsou přihlášky, druhé číslo jsou lidi, kteří jsou přiřazení na workshopu.
+
+		- foreach $workshops as $ws
+			.stat
+				.name=$ws->name
+				.value.light(title="Počet přihlášek")=$ws->sig_total
+				.value(title="Počet účastníků")=$ws->ass_total
