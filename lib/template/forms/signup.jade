@@ -9,7 +9,7 @@
 							.report Přihlašování je již uzavřeno
 					else
 						.site-summary.sign
-							.form-signup
+							Z technických důvodů jsme byli nuceni pozastavit přihlášky. Čekáme než k nám dojdou bankovní transakce. Zkuste to zase zítra.
 				else
 					.site-summary
 						.report Přihlašování se otevře #{$start_f}.
@@ -17,9 +17,7 @@
 
 				.site-summary.read-info
 					.text
-						| Přečtěte si
-						if ! $started
-							&nbsp;zatím
+						| Přečtěte si zatím
 					.info
 						a(href=$ren->url('workshops')) Seznam workshopů
 
