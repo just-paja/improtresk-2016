@@ -9,10 +9,13 @@
 							.report Přihlašování je již uzavřeno
 					else
 						.site-summary.sign
-							| Z technických důvodů jsme byli nuceni pozastavit přihlášky. Čekáme než k nám dojdou bankovní transakce. Zkuste to zase zítra.
+							.form-signup
 				else
 					.site-summary
-						.report Přihlašování se otevře #{$start_f}.
+						.report
+							| Z technických důvodů jsme byli nuceni pozastavit přihlášky. Čekáme než k nám dojdou bankovní transakce.
+						.report
+							| Přihlašování se znovu otevře #{$start_f}.
 
 
 				.site-summary.read-info

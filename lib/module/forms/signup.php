@@ -98,7 +98,7 @@ namespace Module\Forms
 
 		public function run()
 		{
-			$start = new \DateTime("2016-03-26 16:00:00+01:00");
+			$start = new \DateTime("2016-04-01 10:00:00+01:00");
 			$end   = new \DateTime("2016-05-12 00:00:00+01:00");
 			$now   = new \DateTime();
 
@@ -135,7 +135,7 @@ namespace Module\Forms
 
 			$this->partial('forms/signup', array(
 				"start"   => $start,
-				"start_f" => $start->format('j.n. \v G:i'),
+				"start_f" => $start->format('j. n. \v G:i'),
 				"end"     => $end,
 				"started" => $started,
 				"ended"   => $ended,

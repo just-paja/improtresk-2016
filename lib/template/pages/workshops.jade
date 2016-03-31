@@ -11,6 +11,8 @@
 					if $ws->id
 						a(href=$ren->url('workshop', array("workshop" => $ws->id)))
 							.sheep-ass
+								.sheep-head-content
+									span.label.label-primary=$ws->opened - $ws->assignees->count()
 								.sheep-ass-content
 									h4=$ws->lector
 									h3=$ws->name
