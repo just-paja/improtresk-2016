@@ -61,6 +61,7 @@
 			"model":"Workshop.SignUp",
 			"ui_filters":[
 				"lunch",
+				"hotel",
 				"paid",
 				"solved"
 			],
