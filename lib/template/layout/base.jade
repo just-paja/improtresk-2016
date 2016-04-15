@@ -65,12 +65,11 @@ html(lang=$loc->get_lang())
 
     footer
       .container
-        .col-sm-6
+        .col-sm-4
           .sheep-left
             .sheep-jump
-        .col-sm-6
+        .col-sm-8
           .partners.text-xs-center.text-sm-right
-            h3 Pořadatel
             .media.partner
               .media-left
                 a(href="http://improliga.cz")
@@ -81,6 +80,17 @@ html(lang=$loc->get_lang())
                   span.name Česká improvizační liga
                   br
                   span.desc Hlavní pořadatel
+
+            .media.partner.ii
+              .media-left
+                a(href="http://improinstitut.cz")
+                  img(src=$ren->link_resource('pixmap', 'logo/impro-institut.png'))
+
+              .media-body
+                a.media-heading(href="http://improinstitut.cz")
+                  span.name Impro Institut
+                  br
+                  span.desc Partner
 
 
     include ../partial/ga.jade
