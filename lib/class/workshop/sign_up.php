@@ -50,6 +50,7 @@ namespace Workshop
 			'sent_lunch'   => array("type" => 'bool', "default" => false),
 			'sent_match'   => array("type" => 'bool', "default" => false),
 			'sent_camp'    => array("type" => 'bool', "default" => false),
+			'sent_workshopAdditional'=> array("type" => 'bool', "default" => false),
 
 			'check'      => array(
 				"type"    => 'has_one',
