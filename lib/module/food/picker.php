@@ -84,13 +84,13 @@ namespace Module\Food
 			}
 
 			$picked = $signup->food->fetch();
-			$food = \Food\Item::get_all(array("edible" => true))->fetch();
+			$food = \Food\Item::get_all(array("edible" => true))->sort_by('blank desc')->fetch();
 			$days = array();
 			$data = array(
 				'soup_2016-05-14' => 1,
-				'main_2016-05-14' => 666,
+				'main_2016-05-14' => 11,
 				'soup_2016-05-15' => 5,
-				'main_2016-05-15' => 666,
+				'main_2016-05-15' => 12,
 			);
 
 			foreach ($picked as $item) {
@@ -109,9 +109,7 @@ namespace Module\Food
 					$days[$date] = array(
 						"date" => $item->date,
 						"soup" => array(),
-						"main" => array(
-							array("name" => 'Překvapte mě', "value" => 666),
-						),
+						"main" => array(),
 					);
 				}
 
