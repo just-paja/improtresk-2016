@@ -23,7 +23,7 @@ namespace Helper\Cli\Module
 			"general" => array('Send notification containing general information'),
 			"lunch"   => array('Send notification about lunch picker'),
 			"match"   => array('Send notification about match survey'),
-			"camp"    => array('Send notification about summer impro camp 2015'),
+			"camp"    => array('Send notification about summer impro camp 2016'),
 			"workshopAdditional" => array('Send notification about additional workshop to 2016'),
 		);
 
@@ -68,7 +68,7 @@ namespace Helper\Cli\Module
 
 				$mail = new \Helper\Offcom\Mail(array(
 					'rcpt'     => array($user->email),
-					'subject'  => 'Improtřesk 2015 - Výběr oběda',
+					'subject'  => 'Improtřesk 2016 - Výběr oběda',
 					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 					'message'  => $ren->render_content()
 				));
@@ -102,7 +102,7 @@ namespace Helper\Cli\Module
 
 				$mail = new \Helper\Offcom\Mail(array(
 					'rcpt'     => array($user->email),
-					'subject'  => 'Improtřesk 2015 - Týmy na zápas',
+					'subject'  => 'Improtřesk 2016 - Týmy na zápas',
 					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 					'message'  => $ren->render_content()
 				));
@@ -141,7 +141,7 @@ namespace Helper\Cli\Module
 
 				$mail = new \Helper\Offcom\Mail(array(
 					'rcpt'     => array($user->email),
-					'subject'  => 'Improtřesk 2015 - To nejdůležitější',
+					'subject'  => 'Improtřesk 2016 - To nejdůležitější',
 					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 					'message'  => $ren->render_content()
 				));
@@ -180,7 +180,7 @@ namespace Helper\Cli\Module
 
 				$mail = new \Helper\Offcom\Mail(array(
 					'rcpt'     => array($user->email),
-					'subject'  => 'Improtřesk 2015 - Pozvánka na letní IMPRO CAMP 2015 se slevou',
+					'subject'  => 'Improtřesk 2016 - Pozvánka na letní IMPRO CAMP 2016 se slevou',
 					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 					'message'  => $ren->render_content()
 				));
@@ -213,7 +213,7 @@ namespace Helper\Cli\Module
 
 				$mail = new \Helper\Offcom\Mail(array(
 					'rcpt'     => array($user->email),
-					'subject'  => 'Improtřesk 2015 - Otevřeli jsme nový workshop',
+					'subject'  => 'Improtřesk 2016 - Otevřeli jsme nový workshop',
 					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 					'message'  => $ren->render_content()
 				));

@@ -1,0 +1,14 @@
+Ahoj,
+
+v závislosti na tvojí přihlášce na Improtřesk 2015 ti posíláme pozvánku k protekčnímu výběru oběda. Pokud jej nevyužiješ, bude ti jídlo přiděleno podle naší volby. Oběd si můžeš vybrat na následující adrese:
+
+http://improtresk.cz<?=\System\Router::get_url('global', 'food.pick', array("symvar" => $symvar))?>
+
+
+Organizační tým Improtřesku 2016
+http://improtresk.cz
+improtresk@improliga.cz
+
+--
+
+Tato zpráva byla vyžádána v rámci placené přihlášky na Improtřesk 2016.
