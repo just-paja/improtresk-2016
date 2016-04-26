@@ -5,14 +5,41 @@
     p Kromě workshopů dostanete za základní poplatek za Improtřesk i něco do břicha, aby vám ráno nebylo hlady šoufl. Připravíme snídaně v pátek, sobotu a pokud vstaneme, tak i v neděli. Obědy budou skupinové v sobotu a v neděli, v ceně okolo 90 korun za jídlo, podrobnosti ještě dodáme. Už víme, že si budete moci vybrat mezi jídlem s masem a stravou pro vegetariány.
 
     .row
-      .col-md-6
-        h2 Nabídka obědů
-
-        p Na této stránce bude zveřejněn odkaz na výběr jídla podle menu. Menu zatím není zveřejněno.
 
       .col-md-6
-        h2 Kde jsou obědy
+        h2 Výběr oběda
 
+        :php
+          $ren->slot('dispatcher');
+
+        h2 Kde se bude jíst
         p Obědy jsou přímo v místě konání Improtřesku, takže tentokrát žádné přesuny!
+
+      .col-md-6
+        h2 Oběd na sobotu
+
+        :php
+          $food = \Food\Item::get_all(array(
+            "edible" => true,
+            "blank" => false,
+            "date" => "2016-05-14",
+          ))->fetch();
+
+        ul
+          - foreach $food as $item
+            li=$item->name
+
+        h2 Oběd na neděli
+
+        :php
+          $food = \Food\Item::get_all(array(
+            "edible" => true,
+            "blank" => false,
+            "date" => "2016-05-15",
+          ))->fetch();
+
+        ul
+          - foreach $food as $item
+            li=$item->name
 
       .cleaner

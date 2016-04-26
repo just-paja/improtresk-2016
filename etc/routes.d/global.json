@@ -68,23 +68,15 @@
 		"title":"Jídlo - Improtřesk 2016",
 		"subtitle":"Co se bude jíst",
 		"modules":[
-			["system.partial", {"template":"pages/food"}]
-		]
-	},
-
-	{
-		"name":"food.enter",
-		"url":"/jidlo/obedy",
-		"title":"Moje obědy - Improtřesk 2016",
-		"subtitle":"Co dostanu k obědu",
-		"modules":[
 			["system.partial", {"template":"partial/og-lunch", "slot":"og", "wrap":false}],
-			["food.dispatcher"]
+			["system.partial", {"template":"pages/food", "wrap": false}],
+			["food.dispatcher", {"slot": "dispatcher", "wrap": false}]
 		]
 	},
 
 	{
 		"name":"food.pick",
+		"layout":["layout/base", "layout/frontend", "layout/lunch"],
 		"url":"/jidlo/obedy/{symvar:number}",
 		"title":"Moje obědy - Improtřesk 2016",
 		"subtitle":"Co dostanu k obědu",

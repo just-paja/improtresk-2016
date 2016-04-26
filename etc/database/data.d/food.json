@@ -1,0 +1,67 @@
+{
+  "Food\\Item": [
+    {
+      "id_food_item": 1,
+      "name": "Česnečka",
+      "date": "2016-05-14 00:00:00",
+      "type": 1
+    },
+    {
+      "id_food_item": 2,
+      "name": "Těstoviny se sýrovou omáčkou a žampióny",
+      "date": "2016-05-14 00:00:00",
+      "type": 2
+    },
+    {
+      "id_food_item": 3,
+      "name": "Hovězí guláš, houskový knedlík",
+      "date": "2016-05-14 00:00:00",
+      "type": 2
+    },
+    {
+      "id_food_item": 4,
+      "name": "Pečené kuře s bramborovou kaší",
+      "date": "2016-05-14 00:00:00",
+      "type": 2
+    },
+
+    {
+      "id_food_item": 5,
+      "name": "Vývar s nudlemi",
+      "date": "2016-05-15 00:00:00",
+      "type": 1
+    },
+    {
+      "id_food_item": 6,
+      "name": "Kuřecí řízek, brambory vařené",
+      "date": "2016-05-15 00:00:00",
+      "type": 2
+    },
+    {
+      "id_food_item": 7,
+      "name": "Zeleninové rizoto",
+      "date": "2016-05-15 00:00:00",
+      "type": 2
+    },
+    {
+      "id_food_item": 8,
+      "name": "Bramborové knedlíky plněné uzeným se zelím",
+      "date": "2016-05-15 00:00:00",
+      "type": 2
+    },
+    {
+      "id_food_item":9,
+      "name":"Bez polévky",
+      "date":"2016-05-14 00:00:00",
+      "type":1,
+      "blank":true
+    },
+    {
+      "id_food_item":10,
+      "name":"Bez polévky",
+      "date":"2016-05-15 00:00:00",
+      "type":1,
+      "blank":true
+    }
+  ]
+}
