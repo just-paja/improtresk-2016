@@ -12,7 +12,7 @@ html(lang=$loc->get_lang())
     meta(name="og:title", content=$res->title)
     meta(name="og:type", content="website")
     meta(name="og:description", content="Improtřesk je český festival divadelní improvizace a největší setkání improligových týmů z celé České republiky.")
-    meta(name="og:image", content=\System\Resource::get_url('static', 'pixmap', 'hands-softlight-og.jpg'))
+    meta(name="og:image", content='http://'.$rq->host.\System\Resource::get_url('static', 'pixmap', 'og-share.jpg'))
     meta(name="og:url", content=$rq->path)
 
     :php
