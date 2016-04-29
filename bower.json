@@ -24,6 +24,8 @@
     "pwf-jquery-compat": "~0.5.5",
     "pwf-async-compat": "~1.0.1",
     "pwf-moment-compat": "~1.1.5",
+    "pwf-input-autocompleter": "^0.3.4",
+    "pwf-input-collection": "^0.3.2",
     "pwf-form": "~1.8.18",
     "pwf-input-date": "~0.2.9",
     "pwf-preloader": "~0.4.2",
