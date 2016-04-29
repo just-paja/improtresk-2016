@@ -21,6 +21,8 @@
 				"bower/pwf-models-schema",
 				"bower/pwf-models",
 				"bower/pwf-locales",
+				"bower/pwf-input-autocompleter",
+				"bower/pwf-input-collection",
 
 				"bower/pwf-ui-calendar",
 
@@ -50,6 +52,8 @@
 			"archive-2016":[
 				"bower/bootstrap/dist/css/bootstrap.css",
 				"bower/bootstrap/dist/css/bootstrap-theme.css",
+				"bower/pwf-input-autocompleter/styles/autocompleter.less",
+				"bower/pwf-input-collection/styles/collection.less",
 				"styles/archive/2016"
 			]
 		}
@@ -58,6 +62,7 @@
 	"models":{
 		"public":[
 			"Workshop",
+			"Workshop.SignUp",
 			"Workshop.Concept",
 			"Car.Offer"
 		]

@@ -1,0 +1,88 @@
+.page-hotel {
+	label {
+		line-height: 20px;
+		width: 220px;
+	}
+
+	.input-synth,
+	input {
+		border: 1px solid #ccc;
+		background: #fff;
+		font-size:16px;
+		padding: 2px 6px;
+		width: 260px;
+	}
+
+	.input {
+		margin-bottom: 3px;
+	}
+
+	.ac-object-label {
+		font-size:14px;
+		padding: 1px 3px;
+	}
+
+	.icon {
+		display:inline-block;
+		background-repeat:no-repeat;
+		background-position:center center;
+	}
+
+	.icon-actions-col-drop {
+		background-image:url(<icon(godmode/actions/ac-drop,16x16)>);
+	}
+
+	.input-autocompleter {
+		.ac-placeholder {
+			top: 3px;
+		}
+	}
+
+	.input-collection {
+		position:relative;
+		display:inline-block;
+
+		.col-item {
+			display:inline-block;
+			border-radius:4px;
+			background:#fdc400;
+			line-height:100%;
+			vertical-align:top;
+			padding:5px 5px 5px 10px;
+			margin-right:5px;
+			margin-bottom:5px;
+
+			&:last-child {
+				margin-right:0;
+				margin-bottom:0;
+			}
+		}
+
+		.col-item-label {
+			display:inline-block;
+			cursor:default;
+			vertical-align:top;
+			margin-right:5px;
+		}
+
+		.col-item-drop {
+			display:inline-block;
+			cursor:pointer;
+			padding:2px;
+			height:8px;
+			vertical-align:top;
+			border-radius:4px;
+			height:8px;
+			line-height:8px;
+
+			&:hover {
+				background:#c0bfbf;
+			}
+
+			.icon {
+				position:relative;
+			}
+		}
+	}
+
+}

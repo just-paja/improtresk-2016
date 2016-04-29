@@ -33,6 +33,8 @@ namespace Workshop
 		protected static $attrs = array(
 			'name_first' => array("type" => 'varchar'),
 			'name_last'  => array("type" => 'varchar'),
+			'address'    => array("type" => 'varchar'),
+			'id_number'  => array("type" => 'varchar'),
 			'team'       => array("type" => 'varchar'),
 			'email'      => array("type" => 'email'),
 			'phone'      => array("type" => 'varchar'),
@@ -78,6 +80,12 @@ namespace Workshop
 				"model" => 'Food\Item',
 				"is_bilinear" => true,
 				"is_master"   => true
+			),
+
+			'room' => array(
+				"type"  => 'has_many',
+				"model" => 'Workshop\Roommate',
+				"rel"     => 'signup',
 			),
 		);
 
@@ -269,6 +277,24 @@ namespace Workshop
 
 			$this->sent_notif = true;
 			$this->save();
+		}
+
+
+		public function to_object_with_perms(\System\User $user) {
+			$data = parent::to_object_with_perms($user);
+			$data['name'] = implode(' ', array($data['name_first'], $data['name_last']));
+			return $data;
+		}
+
+		public static function get_visible_schema(\System\User $user) {
+			$schema = parent::get_visible_schema($user);
+			$schema['attrs'][27] = array(
+				"name" => 'name',
+				"type" => 'string',
+				"is_fake" => true,
+			);
+
+			return $schema;
 		}
 	}
 }

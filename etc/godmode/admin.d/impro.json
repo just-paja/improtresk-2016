@@ -67,7 +67,7 @@
 			],
 
 			"attrs_list":["name_first", "name_last", "team", "assigned_to", "lunch", "hotel", "paid", "solved", "created_at"],
-			"attrs_info":["id", "name_first", "name_last", "team", "email", "phone", "lunch", "hotel", "rules", "newsletter", "paid", "solved", "assigned_to", "check", "workshops", "created_at"],
+			"attrs_info":["id", "name_first", "name_last", "birthday", "team", "email", "phone", "lunch", "hotel", "rules", "newsletter", "paid", "solved", "assigned_to", "check", "workshops", "roommates", "created_at"],
 			"attrs_edit":["team", "email", "phone", "lunch", "hotel", "solved", "assigned_to", "workshops"]
 		}
 	},
