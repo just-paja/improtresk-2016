@@ -288,11 +288,11 @@ namespace Workshop
 
 		public static function get_visible_schema(\System\User $user) {
 			$schema = parent::get_visible_schema($user);
-			$schema['attrs'][27] = array(
+			$schema['attrs'] = array_merge($schema['attrs'], array(
 				"name" => 'name',
 				"type" => 'string',
 				"is_fake" => true,
-			);
+			));
 
 			return $schema;
 		}
