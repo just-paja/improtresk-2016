@@ -53,6 +53,7 @@ namespace Workshop
 			'sent_match'   => array("type" => 'bool', "default" => false),
 			'sent_camp'    => array("type" => 'bool', "default" => false),
 			'sent_workshopAdditional'=> array("type" => 'bool', "default" => false),
+			'sent_hotel'   => array("type" => 'bool', "default" => false),
 
 			'check'      => array(
 				"type"    => 'has_one',

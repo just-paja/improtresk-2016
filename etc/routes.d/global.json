@@ -53,7 +53,7 @@
 	},
 
 	{
-		"name":"accommodation",
+		"name":"accommodation.register",
 		"url":"/ubytovani/registrace/{symvar:number}",
 		"layout":["layout/base", "layout/frontend", "layout/hotel"],
 		"title":"Registrace k ubytování - Improtřesk 2016",

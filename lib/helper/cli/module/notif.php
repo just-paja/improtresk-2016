@@ -25,6 +25,7 @@ namespace Helper\Cli\Module
 			"match"   => array('Send notification about match survey'),
 			"camp"    => array('Send notification about summer impro camp 2016'),
 			"workshopAdditional" => array('Send notification about additional workshop to 2016'),
+			"hotel" => array('Send notification about hotel accomodation'),
 		);
 
 
@@ -221,6 +222,41 @@ namespace Helper\Cli\Module
 				$mail->send();
 
 				$user->sent_workshopAdditional = true;
+				$user->save();
+			});
+		}
+
+
+		public function cmd_hotel()
+		{
+			\System\Init::full();
+
+			$users = \Workshop\SignUp::get_all()
+				->where(array(
+					"sent_hotel" => false,
+					"hotel" => true,
+					"solved" => true,
+				))
+				->fetch();
+
+			\Helper\Cli::do_over($users, function($key, $user) {
+				$ren = new \System\Template\Renderer\Txt();
+				$ren->reset_layout();
+				$ren->partial('mail/notif/hotel', array(
+					"user" => $user,
+					"symvar" => $user->check->symvar,
+				));
+
+				$mail = new \Helper\Offcom\Mail(array(
+					'rcpt'     => array($user->email),
+					'subject'  => 'Improtřesk 2016 - Ubytování v hotelu',
+					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
+					'message'  => $ren->render_content()
+				));
+
+				$mail->send();
+
+				$user->sent_hotel = true;
 				$user->save();
 			});
 		}

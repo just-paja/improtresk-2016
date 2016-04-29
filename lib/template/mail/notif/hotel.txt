@@ -1,0 +1,14 @@
+Ahoj,
+
+protože jsi v přihlášce na Improtřesk 2016 zaškrtnul ubytování v hotelu, budeme od tebe potřebovat více informací. Použij prosím formulář na odkazu níže:
+
+http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.register', array("symvar" => $symvar))?>
+
+
+Organizační tým Improtřesku 2016
+http://improtresk.cz
+improtresk@improliga.cz
+
+--
+
+Tato zpráva byla vyžádána v rámci placené přihlášky na Improtřesk 2016.
