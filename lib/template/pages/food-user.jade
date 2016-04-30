@@ -1,0 +1,26 @@
+.info-page.picked-food
+	if $days
+		p Výběr jídla je již uzavřen. Zde je tvoje volba.
+
+		- foreach $days as $date=>$day
+
+			.day
+				.date=$day['form']
+
+				.soup
+					.type Polévka
+
+					if $day['soup'][0]
+						.name=$day['soup'][0]['name']
+					else
+						.name Nevybráno
+
+				.main
+					.type Hlavní chod
+
+					if $day['main'][0]
+						.name=$day['main'][0]['name']
+					else
+						.name Nevybráno
+	else
+		p Výběr jídla je již uzavřen. Ale protože sis nic nevybral, tak ti vybereme my.
