@@ -1,0 +1,30 @@
+.container.stats
+	.site-summary.stat-list
+		h1 Rozdělení na hotelu
+
+		p Jak to vypadá s hotelem?
+
+		.stat
+			.name Celkem musíme ubytovat
+			.value.big=$total
+
+		.stat
+			.name Registrací k ubytování prošlo
+			.value.big=$totalChecked
+
+	.site-summary.stat-list
+		h2 Rozdělení na pokoje
+		.row
+			- foreach $rooms as $room
+				.col-sm-6.col-md-4.col-lg-3
+					.panel
+						ul
+							- foreach $room as $signup
+								li=$signup->name_first .' '.$signup->name_last.' ['.$signup->team.']'
+
+	.site-summary.stat-list
+		h2 Neumístění
+
+		- foreach $unMatched as $signup
+			ul
+				li=$signup->name_first .' '.$signup->name_last.' ['.$signup->team.'] #'.$signup->id
