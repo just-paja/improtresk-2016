@@ -108,7 +108,7 @@ namespace Module\Hotel
 				"label" => 'Spolubydlící (nepovinné)',
 				"name"  => 'roommates',
 				"placeholder" => 'Začni psát jméno',
-				"desc" => 'Vyber si až čtyři parťáky které bys chtěl na pokoji. Pomocí této tajné seznamky zjistíme jak všechny účastníky ubytovat. Ve vyhledávání naleznete pouze jména účastníků se zaplacenenou přihlášky v hotelu.',
+				"desc" => 'Vyber si až čtyři parťáky které bys chtěl na pokoji. Pomocí této tajné seznamky zjistíme jak všechny účastníky ubytovat. Ve vyhledávání naleznete pouze jména účastníků se zaplacenenou přihláškou v hotelu.',
 			));
 
 			$f->submit('Uložit');
