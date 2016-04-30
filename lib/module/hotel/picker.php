@@ -40,9 +40,7 @@ namespace Module\Hotel
 
 		public function run_list()
 		{
-			$this->partial('pages/food-user', array(
-				"days" => $this->getSignup(),
-			));
+			$this->partial('pages/hotel');
 		}
 
 		public function run_form()
@@ -107,10 +105,10 @@ namespace Module\Hotel
 				),
 				"multiple" => 4,
 				"model" => 'Workshop.SignUp',
-				"label" => 'Parťáci',
+				"label" => 'Spolubydlící (nepovinné)',
 				"name"  => 'roommates',
 				"placeholder" => 'Začni psát jméno',
-				"desc" => 'Vyber si jednoho až čtyři parťáky které bys chtěl na pokoji a ubytujeme pospolu všechny se stejnou vlnovou délkou.',
+				"desc" => 'Vyber si až čtyři parťáky které bys chtěl na pokoji. Pomocí této tajné seznamky zjistíme jak všechny účastníky ubytovat. Ve vyhledávání naleznete pouze jména účastníků se zaplacenenou přihlášky v hotelu.',
 			));
 
 			$f->submit('Uložit');
