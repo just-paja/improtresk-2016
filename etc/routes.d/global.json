@@ -276,7 +276,7 @@
 	},
 
 	{
-		"name":"nonpayers",
+		"name":"mylunch",
 		"url":"/data/obedy/moje",
 		"title":"Obědy",
 		"subtitle":"Kdo co bude jíst",
@@ -312,6 +312,15 @@
 		"subtitle":"Kdo má největší účast?",
 		"modules":[
 			["stats.teams"]
+		]
+	},
+
+	{
+		"name":"stats.hotel",
+		"url":"/data/hotel",
+		"title":"Hotel",
+		"modules":[
+			["stats.hotel"]
 		]
 	},
 
