@@ -6,9 +6,11 @@ Pokud jedete ve skupině, se spoluhráči nebo s přáteli na Improtřesk, napi�
 
 http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.register', array("symvar" => $symvar))?>
 
+
 Pro přehled jsme připravili online přehled rozdělení do pokojů (odkaz níže). Přehled ovládáte vy.
 
 http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.hotel')?>
+
 
 Pokud máte nějaké dotazy, můžete rovnou odpovědět na tento e-mail.
 
