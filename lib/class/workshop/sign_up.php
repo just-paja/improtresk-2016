@@ -297,5 +297,10 @@ namespace Workshop
 
 			return $schema;
 		}
+
+    public function toName()
+    {
+      return $this->name_first .' '.$this->name_last.($this->team == '-' ? '':' ['.$this->team.']');
+    }
 	}
 }

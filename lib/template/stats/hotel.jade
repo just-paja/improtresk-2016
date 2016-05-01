@@ -1,30 +1,46 @@
-.container.stats
-	.site-summary.stat-list
-		h1 Rozdělení na hotelu
+.container.stats.stats-hotel
+  .site-summary.stat-list
+    h1 Rozdělení na pokoje
 
-		p Jak to vypadá s hotelem?
+    p Toto je grafické znázornění obsazení pokojů v příplatkovém ubytování v Milevsku na Improtřesk 2016. Vazby jsou automaticky počítány z preferencí zvolených v registraci k ubytování (viz e-mail). Bohužel se nedá vyjít vstříc úplně všem požadavkům, proto jsou některé vazby ponechány otevřené.
 
-		.stat
-			.name Celkem musíme ubytovat
-			.value.big=$total
+    h2 Legenda
+    ul.no-style
+      li
+        span.glyphicon.glyphicon-bed
+        =' '
+        | ukazuje spolubydlící
+      li
+        span.glyphicon.glyphicon-transfer
+        =' '
+        | ukazuje nenaplněné vazby
 
-		.stat
-			.name Registrací k ubytování prošlo
-			.value.big=$totalChecked
+    hr
 
-	.site-summary.stat-list
-		h2 Rozdělení na pokoje
-		.row
-			- foreach $rooms as $room
-				.col-sm-6.col-md-4.col-lg-3
-					.panel
-						ul
-							- foreach $room as $signup
-								li=$signup->name_first .' '.$signup->name_last.' ['.$signup->team.']'
-
-	.site-summary.stat-list
-		h2 Neumístění
-
-		- foreach $unMatched as $signup
-			ul
-				li=$signup->name_first .' '.$signup->name_last.' ['.$signup->team.'] #'.$signup->id
+    .row
+      - foreach $rooms as $room
+        .col-sm-6.col-md-4.col-lg-3
+          .panel.panel-default
+            .panel-heading
+              - if count($room) > 1
+                span.glyphicon.glyphicon-home
+                =' Spolubydlící ('.count($room).')'
+              - else
+                span.glyphicon.glyphicon-transfer
+                =' '
+                | Nespárováno
+            .panel-body
+              ul
+                - foreach $room as $signup
+                  li
+                    .matched
+                      span.glyphicon.glyphicon-bed
+                      &nbsp;
+                      span.name=$signup->toName()
+                    .unmatched
+                      - foreach $signup->room->fetch() as $mate
+                        - if !in_array($mate->roommate->id, $housed)
+                          .unmatched-link
+                            span.glyphicon.glyphicon-transfer
+                            &nbsp;
+                            span.name=$mate->roommate->toName()
