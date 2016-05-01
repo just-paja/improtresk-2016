@@ -61,7 +61,7 @@ namespace Car
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->car->email),
 				'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
-				'subject'  => 'Improtřesk 2015 - Pasažér',
+				'subject'  => 'Improtřesk 2016 - Pasažér',
 				'message'  => $ren->render_content()
 			));
 
@@ -96,7 +96,7 @@ namespace Car
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
 				'reply_to' => $this->car->email,
-				'subject'  => 'Improtřesk 2015 - Odpověď od řidiče',
+				'subject'  => 'Improtřesk 2016 - Odpověď od řidiče',
 				'message'  => $ren->render_content()
 			));
 

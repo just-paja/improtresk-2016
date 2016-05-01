@@ -120,7 +120,7 @@ namespace Module\Food
 			}
 
 			$f = $this->response->form(array(
-				"desc"    => 'Předvol si obědy na Improtřesk 2015. Tato možnost končí '.$end->format('j. n. v H:i').'. Můžeš si zvolit "překvapte mě" a my jídlo vybereme za tebe.',
+				"desc"    => 'Předvol si obědy na Improtřesk 2016. Tato možnost končí '.$end->format('j. n. v H:i').'. Můžeš si zvolit "překvapte mě" a my jídlo vybereme za tebe.',
 				"id"      => 'food-picker',
 				"default" => $data,
 			));

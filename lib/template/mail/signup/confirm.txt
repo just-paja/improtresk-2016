@@ -30,7 +30,7 @@ Variabilní symbol: <?= $check->symvar ?>
 
 Do zprávy prosím uveď pro kontrolu svoje jméno.
 
-Organizační tým Improtřesku 2015
+Organizační tým Improtřesku 2016
 http://improtresk.cz
 
 info@improtresk.cz

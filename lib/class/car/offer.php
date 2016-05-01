@@ -110,7 +110,7 @@ namespace Car
 
 			$mail = new \Helper\Offcom\Mail(array(
 				'rcpt'     => array($this->email),
-				'subject'  => 'Improtřesk 2015 - Sdílení auta',
+				'subject'  => 'Improtřesk 2016 - Sdílení auta',
 				'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 				'message'  => $ren->render_content()
 			));

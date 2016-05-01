@@ -16,7 +16,7 @@ namespace Module\Stats
 				->fetch();
 
 			$days = array();
-			$focus = array('2015-05-08', '2015-05-09');
+			$focus = array('2016-05-14', '2016-05-15');
 
 			foreach ($focus as $date_str) {
 				$date   = new \DateTime($date_str);
