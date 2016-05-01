@@ -86,7 +86,7 @@
                 'label':'Plánovaný odjezd',
                 'type':'datetime',
                 'required':true,
-                'value':'2015-05-07T13:00:00+02:00',
+                'value':'2016-05-13T12:00:00+02:00',
                 'desc':'Orientační čas tvého odjezdu'
               },
 
