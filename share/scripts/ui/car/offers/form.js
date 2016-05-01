@@ -91,6 +91,14 @@
               },
 
               {
+                'name':'phone',
+                'label':'Telefonní číslo',
+                'type':'text',
+                'required':true,
+                'desc':'Bude odesláno potvrzeným cestujícím pro zjednodušení komunikace.'
+              },
+
+              {
                 'name':'email',
                 'label':'Tvůj e-mail',
                 'type':'text',

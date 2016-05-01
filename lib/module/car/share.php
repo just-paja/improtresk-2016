@@ -59,6 +59,12 @@ namespace Module\Car
 			));
 
 			$f->input(array(
+				'name' => 'phone',
+				'type' => 'phone',
+				'required' => true
+			));
+
+			$f->input(array(
 				'type' => 'email',
 				'name' => 'email',
 				'required' => true
