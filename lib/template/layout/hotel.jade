@@ -1,6 +1,12 @@
 .container.page-hotel
-	h1 Registrace k ubytování
+  h1 Registrace k ubytování
 
-	:php
-		$ren->slot('outer');
-		$ren->slot();
+  p
+    a(href=$ren->url('accomodation.hotel'))
+      span.glyphicon.glyphicon-user
+      =' '
+      | Online rozpis spolubydlících
+
+  :php
+    $ren->slot('outer');
+    $ren->slot();

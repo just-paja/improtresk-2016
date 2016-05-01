@@ -63,7 +63,7 @@
 	},
 
 	{
-		"name":"stats.hotel",
+		"name":"accomodation.hotel",
 		"url":"/ubytovani/spolubydlici",
 		"title":"Hotel",
 		"modules":[
