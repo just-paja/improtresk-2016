@@ -1,0 +1,23 @@
+Ahoj,
+
+děkujeme všem kteří si na nás našli čas a vyplnili detaily k ubytování. Rychlost jakou jste se s tím někteří vypořádali je pro nás inspirací. Protože však nemáme zase tak velkou kapacitu abychom mohli každému nabídnout pokoj pro sebe, musíme vás poprosit o pomoc se spárováním spolubydlících.
+
+Pokud jedete ve skupině, se spoluhráči nebo s přáteli na Improtřesk, napište jejich jména do formuláře s detaily pro ubytování (odkaz níže). Ušetříte nám tím spoustu starostí a sobě čas který bychom tomu věnovali až na místě. Formulář můžete upravovat kolikrát chcete.
+
+http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.register', array("symvar" => $symvar))?>
+
+Pro přehled jsme připravili online přehled rozdělení do pokojů (odkaz níže). Přehled ovládáte vy.
+
+http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.hotel')?>
+
+Pokud máte nějaké dotazy, můžete rovnou odpovědět na tento e-mail.
+
+Hezký zbytek víkendu přeje
+
+Organizační tým Improtřesku 2016
+http://improtresk.cz
+info@improtresk.cz
+
+--
+
+Tato zpráva byla vyžádána v rámci placené přihlášky na Improtřesk 2016.
