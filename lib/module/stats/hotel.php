@@ -7,6 +7,24 @@ namespace Module\Stats
     const ROOM_MAX = 4;
     const ROOM_MIN = 1;
 
+    public $roomNumbers = array(
+      array( 'label' => '22 A', 'max' => 4 ),
+      array( 'label' => '22 B', 'max' => 2 ),
+      array( 'label' => '23 A', 'max' => 2 ),
+      array( 'label' => '23 B', 'max' => 4 ),
+      array( 'label' => '24 A', 'max' => 2 ),
+      array( 'label' => '24 B', 'max' => 3 ),
+      array( 'label' => '25 A', 'max' => 2 ),
+      array( 'label' => '25 B', 'max' => 3 ),
+      array( 'label' => '26',   'max' => 2 ),
+      array( 'label' => '27 A', 'max' => 2 ),
+      array( 'label' => '27 B', 'max' => 2 ),
+      array( 'label' => '28 A', 'max' => 2 ),
+      array( 'label' => '28 B', 'max' => 2 ),
+      array( 'label' => '29',   'max' => 2 ),
+      array( 'label' => '30',   'max' => 2 ),
+    );
+
     public function getAvailableRoommates($signup)
     {
       $roommates = $signup->room->fetch();
@@ -146,12 +164,8 @@ namespace Module\Stats
 
     public function fetchRoomsSignups($rooms)
     {
-      return array_map(function($room) {
-        $mapSignups = function($id) {
-          return \Workshop\Signup::find($id);
-        };
-
-        return array_map($mapSignups, $room);
+      return array_map(function($id) {
+        return \Workshop\Signup::find($id);
       }, $rooms);
     }
 
@@ -178,10 +192,40 @@ namespace Module\Stats
         return $carry;
       }, []);
 
-      //~ $housedIds = array();
+      $roomNumbers = $this->roomNumbers;
+      $rooms = array_map(function($item) use (&$roomNumbers) {
+        $end = \DateTime::createFromFormat('Y-m-d H:i:s', \Module\Hotel\Picker::EDITABLE_UNTIL);
+        $now = new \DateTime();
+
+        if (count($item) > 1 || $now > $end) {
+          foreach ($roomNumbers as $key=>$room) {
+            if ($room['max'] <= count($item)) {
+              break;
+            }
+          }
+        }
+
+        $label = 'Nespárováno';
+        $max = '?';
+        $paired = false;
+
+        if (isset($room)) {
+          array_splice($roomNumbers, $key, 1);
+          $label = 'Pokoj '.$room['label'];
+          $max = $room['max'];
+          $paired = true;
+        }
+
+        return array(
+          "label" => $label,
+          "max" => $max,
+          "paired" => $paired,
+          "housed" => $this->fetchRoomsSignups($item),
+        );
+      }, $rooms);
 
       return array(
-        'rooms' => $this->fetchRoomsSignups($rooms),
+        'rooms' => $rooms,
         'housed' => $housedIds,
         'matched' => array_map(function($item) { return $item->id; }, $signups),
       );

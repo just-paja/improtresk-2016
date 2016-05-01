@@ -4,34 +4,47 @@
 
     p Toto je grafické znázornění obsazení pokojů v příplatkovém ubytování v Milevsku na Improtřesk 2016. Vazby jsou automaticky počítány z preferencí zvolených v registraci k ubytování (viz e-mail). Bohužel se nedá vyjít vstříc úplně všem požadavkům, proto jsou některé vazby ponechány otevřené.
 
-    h2 Legenda
-    ul.no-style
-      li
-        span.glyphicon.glyphicon-bed
-        =' '
-        | ukazuje spolubydlící
-      li
-        span.glyphicon.glyphicon-transfer
-        =' '
-        | ukazuje nenaplněné vazby
+    .row
+      .col-md-6
+        h2 Legenda
+        ul.no-style
+          li
+            span.glyphicon.glyphicon-home
+            =' '
+            | Ukazuje přidělený pokoj
+          li
+            span.glyphicon.glyphicon-bed
+            =' '
+            | Ukazuje spolubydlící
+          li
+            span.glyphicon.glyphicon-transfer
+            =' '
+            | Ukazuje nepropojené vazby
+
+      .col-md-6
+        h2 Nápověda jednou větou
+
+        ul
+          li Čísla pokojů i rozmístění účastníků se mění podle zadání.
+          li Spolubydlícím se v tomto seznamu stanete pouze pokud to chtějí obě strany.
+          li Pokoje jsou přidělovány dynamicky aby došlo k optimálnímu zaplnění.
 
     hr
 
     .row
-      - foreach $rooms as $room
+      - foreach $rooms as $index => $room
         .col-sm-6.col-md-4.col-lg-3
           .panel.panel-default
             .panel-heading
-              - if count($room) > 1
+              - if $room['paired']
                 span.glyphicon.glyphicon-home
-                =' Spolubydlící ('.count($room).')'
               - else
                 span.glyphicon.glyphicon-transfer
-                =' '
-                | Nespárováno
+
+              =' '.$room['label'].' ('.count($room['housed']).'/'.$room['max'].')'
             .panel-body
               ul
-                - foreach $room as $signup
+                - foreach $room['housed'] as $signup
                   li
                     .matched
                       span.glyphicon.glyphicon-bed
