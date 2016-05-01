@@ -36,12 +36,32 @@
         .col-sm-6.col-md-4.col-lg-3
           .panel.panel-default
             .panel-heading
+              :php
+                $className = 'label-info';
+
+                if ($room['max'] == 3) {
+                  $className = 'label-warning';
+                }
+
+                if ($room['max'] == 4) {
+                  $className = 'label-danger';
+                }
+
               - if $room['paired']
                 span.glyphicon.glyphicon-home
+                =' Ubytováno'
+
+                .room-label.pull-right
+                  .label.room-label-left(class=$className)
+                    .glyphicon.glyphicon-lamp
+                    =' Pokoj'
+                  span.label.label-primary.room-label-mid=$room['label']
+                  span.label.room-label-right(class=$className)=count($room['housed']).'/'.$room['max']
               - else
                 span.glyphicon.glyphicon-transfer
+                =' Nespárováno '
+                span.label.pull-right(class=$className)=count($room['housed']).'/'.$room['max']
 
-              =' '.$room['label'].' ('.count($room['housed']).'/'.$room['max'].')'
             .panel-body
               ul
                 - foreach $room['housed'] as $signup
@@ -57,3 +77,28 @@
                             span.glyphicon.glyphicon-transfer
                             &nbsp;
                             span.name=$mate->roommate->toName()
+
+    hr
+
+    section
+      h2 Volné pokoje
+
+      ul.list-inline.rooms-free
+        - foreach $free as $room
+          li
+            :php
+              $className = 'label-info';
+
+              if ($room['max'] == 3) {
+                $className = 'label-warning';
+              }
+
+              if ($room['max'] == 4) {
+                $className = 'label-danger';
+              }
+
+            .label.room-label-left(class=$className)
+              .glyphicon.glyphicon-lamp
+              =' Pokoj'
+            .label.label-primary.room-label-mid=$room['label']
+            .label.room-label-right(class=$className)=$room['max']

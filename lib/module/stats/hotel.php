@@ -211,7 +211,7 @@ namespace Module\Stats
 
         if (isset($room)) {
           array_splice($roomNumbers, $key, 1);
-          $label = 'Pokoj '.$room['label'];
+          $label = $room['label'];
           $max = $room['max'];
           $paired = true;
         }
@@ -224,9 +224,18 @@ namespace Module\Stats
         );
       }, $rooms);
 
+      usort($roomNumbers, function($a, $b) {
+        if ($a['max'] == $b['max']) {
+          return 0;
+        }
+
+        return $a['max'] > $b['max'] ? -1 : 1;
+      });
+
       return array(
         'rooms' => $rooms,
         'housed' => $housedIds,
+        'free' => $roomNumbers,
         'matched' => array_map(function($item) { return $item->id; }, $signups),
       );
     }
@@ -242,6 +251,7 @@ namespace Module\Stats
 
       $this->partial('stats/hotel', array(
         "total" => $total,
+        "free" => $rooms['free'],
         "rooms" => $rooms['rooms'],
         "housed" => $rooms['housed'],
       ));
