@@ -63,6 +63,15 @@
 	},
 
 	{
+		"name":"stats.hotel",
+		"url":"/ubytovani/spolubydlici",
+		"title":"Hotel",
+		"modules":[
+			["stats.hotel"]
+		]
+	},
+
+	{
 		"name":"fees",
 		"url":"/cena",
 		"title":"Poplatky - Improtřesk 2016",
@@ -312,15 +321,6 @@
 		"subtitle":"Kdo má největší účast?",
 		"modules":[
 			["stats.teams"]
-		]
-	},
-
-	{
-		"name":"stats.hotel",
-		"url":"/data/hotel",
-		"title":"Hotel",
-		"modules":[
-			["stats.hotel"]
 		]
 	},
 
