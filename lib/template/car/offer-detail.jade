@@ -1,0 +1,78 @@
+.container.carshare-detail
+  h1 Improjízdomat
+  .row
+    .col-md-6
+      .carshare-block
+
+        .vehicle
+          .icon(class=$item->icon)
+
+        h2 Detaily jízdy
+
+        ul.list-unstyled.info
+          li
+            .glyphicon.glyphicon-road
+            =' '
+            span.value=$item->from
+            =' '
+            .glyphicon.glyphicon-arrow-right
+            =' Milevsko'
+
+          li
+            .glyphicon.glyphicon-time
+            =' '
+            span.value=$item->departure->format("j.n. H:i")
+
+          li
+            span.value-label Volná místa:
+            =' '
+            span.badge=$free
+
+          li
+            span.value-label Řidič:
+            =' '
+            span.label.label-default=$item->driver
+
+      if $item->desc
+        .carshare-block
+          h3 Zpráva pro spolucestující
+          .desc=$item->desc
+
+      if $show_rq
+        .carshare-block.sep
+          h3 Cestující
+
+          if any($requests)
+            ol.list-unstyled.requests
+              - foreach $requests as $row
+                li.row
+                  .col-md-6
+                    if $row->status == 1
+                      .glyphicon.glyphicon-question-sign
+                    if $row->status == 2
+                      .glyphicon.glyphicon-ok-sign
+                    if $row->status == 3 || $row->status == 4
+                      .glyphicon.glyphicon-remove-sign
+                    =' '
+                    span.rq-name=$row->name
+                  .col-md-6
+                    if $row->status == 1
+                      span.label.label-warning Čeká na potvrzení
+                    if $row->status == 2
+                      span.label.label-success Potvrzeno
+                    if $row->status == 3
+                      span.label.label-danger Zrušeno
+                    if $row->status == 4
+                      span.label.label-danger Odmítnuto
+          else
+            p Zatím se nikdo nepřihlásil
+
+    .col-md-6
+      if $show_form
+        .carshare-block
+          h2 Chci jet taky
+
+          if $free > 0
+            .car-requests-form(data-car-id=$item->id)
+          else
+            p Tato jízda už je plná

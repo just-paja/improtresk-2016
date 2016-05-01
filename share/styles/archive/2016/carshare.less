@@ -1,0 +1,103 @@
+.carshare {
+  .the-form,
+  .open-div {
+    height: 0;
+    overflow:hidden;
+    -webkit-transition: height 1s linear;
+  }
+
+  .open {
+    height: auto;
+  }
+}
+
+.ui-car-offers-form,
+.ui-car-requests-form {
+  input,
+  textarea {
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size:18px;
+    line-height:32px;
+    padding:0 .5rem;
+    width: 260px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  label {
+    line-height:30px;
+    margin: 0;
+    width: 170px;
+  }
+
+  .input {
+    margin-bottom: 1rem;
+
+    .desc {
+      padding:0 1rem 0 170px;
+    }
+  }
+
+  .input-datetime {
+    .input-date,
+    .input-time {
+      display:inline-block;
+      margin: 0;
+    }
+
+    .input {
+      margin-bottom: 0;
+    }
+
+    .input-date {
+      margin-right:.5rem;
+    }
+
+    .input-date input {
+      width:120px;
+    }
+
+    .input-time input {
+      width:80px;
+    }
+  }
+}
+
+.carshare-offer {
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .info {
+    margin-bottom: 1rem;
+
+    .from {
+      font-size: 24px;
+    }
+
+    .departure {
+      font-size: 18px;
+    }
+  }
+}
+
+.carshare-detail {
+  .icon {
+    background-position: left center;
+    height: 200px;
+    transform: none !important;
+  }
+
+  .info {
+    font-size: 18px;
+  }
+}

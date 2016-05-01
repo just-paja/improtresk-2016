@@ -1,0 +1,27 @@
+Ahoj,
+
+<?=$item->name?> projevil zájem o zpříjemnění tvojí cesty autem na Improtřesk. Kontaktuj ho na telefonním čísle <?=$item->phone?> nebo na emailu <?=$item->email?> a domluvte se na společném odjezdu.
+
+<?
+	if ($item->desc) {
+		echo "Doplňující zpráva od uživatele:\n";
+		echo $item->desc."\n\n";
+	}
+
+	if (!$full) {
+		?>
+		(Tvoje nabídka bude schována v okamžiku, kdy bude naplněna a přestanou ti chodit upozornění.)
+		<?
+	}
+?>
+
+<?=$admin?>
+
+
+Těšíme se na vás, jeďte bezpečně!
+
+Organizační tým Improtřesku 2016
+
+<?=$res->request->protocol?>://<?=$res->request->host?>
+
+info@improtresk.cz

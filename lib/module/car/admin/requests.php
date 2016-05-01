@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Module\Car\Offer\Admin
+namespace Module\Car\Admin
 {
 	class Requests extends \System\Module
 	{
@@ -51,7 +50,7 @@ namespace Module\Car\Offer\Admin
 					}
 
 					$offer->update_status();
-					$this->flow->redirect($this->response->path);
+					$this->response->redirect($this->request->path);
 				} else {
 					$fn->out($this);
 				}
@@ -101,7 +100,7 @@ namespace Module\Car\Offer\Admin
 					}
 
 					$offer->update_status();
-					$this->flow->redirect($this->response->path);
+					$this->response->redirect($this->request->path);
 				} else {
 					$fc->out($this);
 				}

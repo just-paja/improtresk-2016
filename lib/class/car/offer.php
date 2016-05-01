@@ -20,14 +20,9 @@ namespace Car
 					'sedan'        => 'sedan',
 					'combi'        => 'combi',
 					'hatchback'    => 'hatchback',
-					'hatchback-3d' => 'hatchback-3d',
-					'coupe'        => 'coupe',
-					'van'          => 'van',
-					'microbus'     => 'microbus',
 					'cabriolet'    => 'cabriolet',
 					'mpv'          => 'mpv',
 					'suv'          => 'suv',
-					'pickup'       => 'pickup',
 					'limousine'    => 'limousine',
 					'tank'         => 'tank',
 				),
@@ -110,7 +105,7 @@ namespace Car
 			$ren = \System\Template\Renderer\Txt::from_response($res);
 			$ren->reset_layout();
 			$ren->partial('mail/car/offer', array(
-				"admin" => $res->url_full('carshare_admin', array($this->ident))
+				"admin" => $res->url_full('carshare.admin', array($this->ident))
 			));
 
 			$mail = new \Helper\Offcom\Mail(array(

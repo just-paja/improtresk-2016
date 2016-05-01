@@ -1,6 +1,6 @@
 <?php
 
-namespace Module\Car\Offer\Admin
+namespace Module\Car\Admin
 {
 	class Edit extends \System\Module
 	{
@@ -30,7 +30,7 @@ namespace Module\Car\Offer\Admin
 				$this->request->fconfig = $cfg;
 				$this->response->subtitle = 'úpravy nabídky na sdílení auta';
 
-				$this->partial('pages/carshare-admin', array(
+				$this->partial('car/admin/form', array(
 					"item"     => $offer,
 					"requests" => $offer->requests->fetch()
 				));

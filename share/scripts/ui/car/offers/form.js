@@ -23,6 +23,8 @@
 				{
 					var el = this.get_el().trigger('loaded', this);
 
+          this.get_el('form').find('button').addClass('btn').addClass('btn-primary');
+
 					if (err) {
 						el.find('.form-group-typed-buttons').stop(true).slideDown();
 						this.get_el('errors')
@@ -31,7 +33,7 @@
 							.stop(true)
 							.slideDown();
 					} else {
-						this.get_el('form').slideUp(250);
+						this.get_el('form').removeClass('open');
 						this.get_el('result').html('<p class="success">Tvoje nabídka byla uložena, děkujeme.</p>');
 
 						pwf.create('ui.car.offers.item', pwf.merge(this.get_data(), {
@@ -136,6 +138,7 @@
 						'type':'buttons',
 						'elements':[
 							{
+                'cname': ['btn', 'btn-primary'],
 								'element':'button',
 								'type':'submit',
 								'label':'Vložit'
@@ -170,11 +173,17 @@
 					]
 				},
 
-				{
-					'name':'open',
-					'cname':['button'],
-					'html':'Nabídnout místo v autě'
-				}
+        {
+          'name':'open-div',
+          'cname': ['open'],
+          'els':[
+            {
+              'name':'open',
+              'cname':['btn', 'btn-primary'],
+              'html':'Nabídnout místo v autě'
+            }
+          ]
+        }
 			],
 
 
@@ -205,7 +214,7 @@
 					this.get_el('form').show();
 					this.get_el('open').remove();
 				} else {
-					this.get_el('open').bind('click touchend', p, p.get('actions.open'));
+					this.get_el('open-div').find('.btn').bind('click touchend', p, p.get('actions.open'));
 				}
 			},
 
@@ -224,8 +233,8 @@
 		'public':{
 			'open':function()
 			{
-				this.get_el('form').slideDown(250);
-				this.get_el('open').slideUp(250);
+				this.get_el('form').addClass('open');
+				this.get_el('open-div').removeClass('open');
 			}
 		}
 	});

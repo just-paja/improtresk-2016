@@ -55,7 +55,7 @@ namespace Car
 				"item"  => $this,
 				"offer" => $this->car,
 				"full"  => $this->car->is_full(),
-				"admin" => $res->url_full('carshare_admin', array($this->car->ident))
+				"admin" => $res->url_full('carshare.admin', array($this->car->ident))
 			));
 
 			$mail = new \Helper\Offcom\Mail(array(
@@ -90,7 +90,7 @@ namespace Car
 				"item"  => $this,
 				"offer" => $this->car,
 				"full"  => $this->car->is_full(),
-				"admin" => $res->url_full('carshare_admin', array($this->car->ident))
+				"admin" => $res->url_full('carshare.admin', array($this->car->ident))
 			));
 
 			$mail = new \Helper\Offcom\Mail(array(

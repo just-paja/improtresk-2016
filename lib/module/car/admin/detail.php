@@ -1,6 +1,6 @@
 <?php
 
-namespace Module\Car\Offer\Admin
+namespace Module\Car\Admin
 {
 	class Detail extends \System\Module
 	{
@@ -32,21 +32,11 @@ namespace Module\Car\Offer\Admin
 				$rq->fconfig = $cfg;
 				$res->subtitle = 'úpravy nabídky na sdílení auta';
 				$this->propagate('offer', $offer);
+				$this->propagate('id', $offer->id);
 
-				$this->partial('pages/carshare-detail', array(
-					"item"      => $offer,
-					"free"      => $offer->seats - $offer->requests->where(array('status' => 2))->count(),
-					"show_form" => false,
-					"show_rq"   => true,
-					"requests"  => $offer->requests->add_filter(array(
-						'attr'  => 'status',
-						'type'  => 'exact',
-						'exact' => array(1,2)
-					))->fetch(),
-				));
-
-				$this->partial('pages/carshare-admin-links', array(
-					"ident" => $ident
+				$this->partial('car/admin/links', array(
+					"ident" => $ident,
+          "slot" => 'detail',
 				));
 
 			} else throw new \System\Error\NotFound();

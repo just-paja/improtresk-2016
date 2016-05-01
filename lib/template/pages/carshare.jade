@@ -1,16 +1,18 @@
-.carshare
-	h1 Autem na Improtřesk
-	p Uvědomujeme si, že Milevsko není centrem republiky. Ale alespoň na začátku května se jím na pár dní stane. Jenže jak tam dostat všechny ty skvělé lidi, kteří na setkání improvizátorů přijedou? Spočítali jsme, že vypravení samostatných autobusů z Brna a Ostravy do Milevska by vyšlo moc draho. Počítáme ale s tím, že mnozí z vás pojedou auty. Abyste se mohli slaďovat už po cestě, nabízíme možnost propojení lidí, kteří budou mít ve svých vozech volná místa s těmi, kteří auta nemají.
+.container.carshare
+	h1 Improjízdomat
+	p Uvědomujeme si, že Milevsko není centrem republiky. Na začátku května se jím na pár dní však stane. Jenže jak tam dostat všechny ty skvělé lidi, kteří na setkání improvizátorů přijedou? Spočítali jsme, že vypravení samostatných autobusů z Brna a Ostravy do Milevska by vyšlo moc draho. Počítáme ale s tím, že mnozí z vás pojedou autem. Abyste mohli najít společnou vlnovou délku už po cestě, nabízíme možnost propojení lidí, kteří budou mít ve svých vozech volná místa s těmi, kteří auta nemají.
 
-	.col-md-6
-		h2 Mám auto
-		p Improtřesk je a vždy byl o poznávání lidí, tak pojďte do toho!
-		p Pokud máš auto, zanech nám tady nabídku na odvoz s počtem míst a městem, ze kterého budeš vyjíždět. Tvoji pasažéři se ti už ozvou sami. Tvoje kontaktní údaje nebudou zveřejněny. Za odměnu dostane každý nálepku.
+  .row
+    .col-md-6
+      h2 Sháním odvoz
+      p Nelíbí se ti spoje z tvého města do Milevska? Tady je seznam všech, kteří nabízejí odvoz a počet zbývajících volných míst v autě. Ikonky nemusí přesně odpovídat typu auta.
 
-		.car-offers-form
+      :php
+        $ren->slot('list');
 
-	.col-md-6
-		h2 Sháním odvoz
-		p Nelíbí se ti spoje z tvého města do Milevska? Tady je seznam všech, kteří nabízejí odvoz a počet zbývajících volných míst v autě. Ikonky nemusí přesně odpovídat typu auta.
+    .col-md-6
+      h2 Mám auto
+      p Improtřesk je a vždy byl o poznávání lidí, tak pojďte do toho!
+      p Pokud máš auto, zanech nám tady nabídku na odvoz s počtem míst a městem, ze kterého budeš vyjíždět. Tvoji pasažéři se ti už ozvou sami. Tvoje kontaktní údaje nebudou zveřejněny. Za odměnu dostane každý nálepku.
 
-		.car-offers
+      .car-offers-form

@@ -16,10 +16,6 @@ pwf.wait_for('module', 'jquery', function() {
 						'selector':'.form-signup'
 					},
 					{
-						'ui':'ui.car.offers',
-						'selector':'.car-offers'
-					},
-					{
 						'ui':'ui.car.offers.form',
 						'selector':'.car-offers-form'
 					},

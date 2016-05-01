@@ -1,0 +1,9 @@
+Ahoj,
+
+<?=$item->car->driver?> zrušil vaší spolujízdu na Improtřesk. Zkus to s někým jiným :)
+
+Organizační tým Improtřesku 2016
+
+<?=$res->request->protocol?>://<?=$res->request->host?>
+
+info@improtresk.cz

@@ -1,0 +1,18 @@
+Ahoj,
+
+děkujeme za tvojí pomoc ostatním při cestování na Improtřesk.
+
+Nyní je tvoje nabídka zveřejněná, a na odkaze níže uvidíš, jestli se někdo s tebou chce projet, nebo ne.
+
+<?=$admin?>
+
+
+Pokud by sis to rozmyslel, můžeš nabídku přepsat nebo rovnou smazat, ale doufáme, že se tak nestane. Až se někdo rozhodne, že se s tebou vydá na cestu za dobrodružstvím, napíšeme ti elektronický dopis, abys s ním počítal.
+
+Slaďme se!
+
+Organizační tým Improtřesku 2016
+
+<?=$res->request->protocol?>://<?=$res->request->host?>
+
+info@improtresk.cz

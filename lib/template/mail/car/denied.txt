@@ -1,0 +1,9 @@
+Ahoj,
+
+<?=$item->car->driver?> tě sebou nechce jako spolucestujícího na Improtřesk. Buď už má plno a nebo se mu třeba rozbilo auto. Zkus to s někým jiným :)
+
+Organizační tým Improtřesku 2016
+
+<?=$res->request->protocol?>://<?=$res->request->host?>
+
+info@improtresk.cz

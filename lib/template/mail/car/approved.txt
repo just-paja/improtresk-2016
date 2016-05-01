@@ -1,0 +1,16 @@
+Ahoj,
+
+<?=$item->car->driver?> tě označil jako spolucestujícího do svého auta na Improtřesk. Pokud tě ještě nekontaktoval, tak se mu ozvi a domluvte se jak pojedete. Posíláme ti na něj kontakt.
+
+Telefon: <?=$item->car->phone?>
+
+E-mail: <?=$item->car->email?>
+
+
+Těšíme se na vás, jeďte bezpečně!
+
+Organizační tým Improtřesku 2016
+
+<?=$res->request->protocol?>://<?=$res->request->host?>
+
+info@improtresk.cz

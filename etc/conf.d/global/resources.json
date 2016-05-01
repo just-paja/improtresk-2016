@@ -23,6 +23,7 @@
 				"bower/pwf-locales",
 				"bower/pwf-input-autocompleter",
 				"bower/pwf-input-collection",
+        "bower/pwf-adminer",
 
 				"bower/pwf-ui-calendar",
 
@@ -54,6 +55,7 @@
 				"bower/bootstrap/dist/css/bootstrap-theme.css",
 				"bower/pwf-input-autocompleter/styles/autocompleter.less",
 				"bower/pwf-input-collection/styles/collection.less",
+				"bower/pwf-input-date/styles/date.less",
 				"styles/archive/2016"
 			]
 		}

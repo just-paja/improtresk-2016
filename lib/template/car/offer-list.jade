@@ -1,0 +1,29 @@
+.carshare-offer-list
+
+  - foreach $list as $item
+    .row.carshare-offer
+      .col-xs-6
+        .info
+          .from
+            =$item->from
+            =' '
+            .glyphicon.glyphicon-arrow-right
+            =' '
+            | Milevsko
+          .departure
+            span.glyphicon.glyphicon-time
+            =' '
+            span.time=$item->departure->format('j. n. g:m')
+          .seats
+            span.free Volná místa:
+            =' '
+            span.badge=$item->seats - $item->used
+          .driver
+            span.name Řidič:
+            =' '
+            span.label.label-default=$item->driver
+        .c2a
+          a.btn.btn-primary(href=$ren->url('carshare.detail', array('id' => $item->id))) Chci jet!
+
+      .col-xs-6.vehicle
+        .icon(class=$item->icon)
