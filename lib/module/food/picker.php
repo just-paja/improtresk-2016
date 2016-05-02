@@ -4,7 +4,7 @@ namespace Module\Food
 {
 	class Picker extends \System\Module
 	{
-		const EDITABLE_UNTIL = '2016-05-02 00:00:00';
+		const EDITABLE_UNTIL = '2016-05-03 00:00:00';
 
 
 		public function run()
