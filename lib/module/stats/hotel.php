@@ -193,6 +193,15 @@ namespace Module\Stats
       }, []);
 
       $roomNumbers = $this->roomNumbers;
+
+      usort($roomNumbers, function($a, $b) {
+        if ($a['max'] == $b['max']) {
+          return 0;
+        }
+
+        return $a['max'] > $b['max'] ? -1 : 1;
+      });
+
       $rooms = array_map(function($item) use (&$roomNumbers) {
         $end = \DateTime::createFromFormat('Y-m-d H:i:s', \Module\Hotel\Picker::EDITABLE_UNTIL);
         $now = new \DateTime();
@@ -223,14 +232,6 @@ namespace Module\Stats
           "housed" => $this->fetchRoomsSignups($item),
         );
       }, $rooms);
-
-      usort($roomNumbers, function($a, $b) {
-        if ($a['max'] == $b['max']) {
-          return 0;
-        }
-
-        return $a['max'] > $b['max'] ? -1 : 1;
-      });
 
       return array(
         'rooms' => $rooms,
