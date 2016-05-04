@@ -4,7 +4,7 @@ namespace Module\Hotel
 {
 	class Picker extends \System\Module
 	{
-		const EDITABLE_UNTIL = '2016-05-04 00:00:00';
+		const EDITABLE_UNTIL = '2016-05-06 00:00:00';
 
 
 		public function run()
