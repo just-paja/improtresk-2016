@@ -19,10 +19,10 @@
         h2 Oběd na sobotu
 
         :php
-          $food = \Food\Item::get_all(array(
-            "edible" => true,
-            "blank" => false,
-            "date" => "2016-05-14",
+          $food = \Food\Item::get_all()->add_filter(array(
+            "attr" => "id",
+            "type" => "in",
+            "in" => array(1, 2, 3, 4),
           ))->fetch();
 
         ul
@@ -32,10 +32,10 @@
         h2 Oběd na neděli
 
         :php
-          $food = \Food\Item::get_all(array(
-            "edible" => true,
-            "blank" => false,
-            "date" => "2016-05-15",
+          $food = \Food\Item::get_all()->add_filter(array(
+            "attr" => "id",
+            "type" => "in",
+            "in" => array(5, 6, 7, 8),
           ))->fetch();
 
         ul
