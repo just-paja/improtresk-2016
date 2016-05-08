@@ -1,15 +1,18 @@
-.container.stats
-	ul.ws-list
-		- foreach $workshops as $ws
-			li.ws
-				.ws-info.heading
-					span.ws-name=$ws->name
-					span.ws-total='('.$ws->ass_total.')'
+.container
+  ul.list-unstyled
+    - foreach $workshops as $ws
+      li.col-sm-3
+        .panel.panel-default
+          .panel-heading
+            strong.ws-info
+              span.ws-name=$ws->name
+            =' '
+            .label.label-default.ws-lector=$ws->lector
+            span.badge.pull-right=$ws->ass_total
 
-				.ws-lector=$ws->lector
-
-				if count($ws->ass_all) > 0
-					ol.ws-members
-						- foreach $ws->ass_all as $ass
-							li
-								span.ass-name=$ass->name_first.' '.$ass->name_last
+          .panel-body
+            if count($ws->ass_all) > 0
+              ol.ws-members
+                - foreach $ws->ass_all as $ass
+                  li
+                    span.ass-name=$ass->name_first.' '.$ass->name_last
