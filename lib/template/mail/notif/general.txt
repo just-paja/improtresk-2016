@@ -1,0 +1,6 @@
+Ahoj,
+
+...
+
+
+<?php require('../footer.txt'); ?>

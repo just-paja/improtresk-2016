@@ -14,12 +14,5 @@ http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.hotel')?
 
 Pokud máte nějaké dotazy, můžete rovnou odpovědět na tento e-mail.
 
-Hezký zbytek víkendu přeje
 
-Organizační tým Improtřesku 2016
-http://improtresk.cz
-info@improtresk.cz
-
---
-
-Tato zpráva byla vyžádána v rámci placené přihlášky na Improtřesk 2016.
+<?php require('../footer.txt'); ?>

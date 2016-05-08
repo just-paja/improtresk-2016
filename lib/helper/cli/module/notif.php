@@ -143,7 +143,7 @@ namespace Helper\Cli\Module
 
 				$mail = new \Helper\Offcom\Mail(array(
 					'rcpt'     => array($user->email),
-					'subject'  => 'Improtřesk 2016 - To nejdůležitější',
+					'subject'  => 'Improtřesk 2016 - S sebou',
 					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
 					'message'  => $ren->render_content()
 				));

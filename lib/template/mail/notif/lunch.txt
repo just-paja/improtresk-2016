@@ -5,10 +5,4 @@ v závislosti na tvojí přihlášce na Improtřesk 2016 ti posíláme pozvánku
 http://improtresk.cz<?=\System\Router::get_url('global', 'food.pick', array("symvar" => $symvar))?>
 
 
-Organizační tým Improtřesku 2016
-http://improtresk.cz
-improtresk@improliga.cz
-
---
-
-Tato zpráva byla vyžádána v rámci placené přihlášky na Improtřesk 2016.
+<?php require('../footer.txt'); ?>

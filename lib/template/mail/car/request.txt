@@ -20,8 +20,4 @@ Ahoj,
 
 Těšíme se na vás, jeďte bezpečně!
 
-Organizační tým Improtřesku 2016
-
-<?=$res->request->protocol?>://<?=$res->request->host?>
-
-info@improtresk.cz
+<?php require('../footer.txt'); ?>
