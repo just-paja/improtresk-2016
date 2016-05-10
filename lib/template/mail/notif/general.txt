@@ -1,6 +1,16 @@
-Ahoj,
+Ahoj účastníci,
 
-...
+jistě už se těšíte na největší impro setkání roku, Improtřesk 2016. Ještě než vyrazíte, máme pro Vás doporučení, co si vzít s sebou.
+
+Nejdůležitější věcí pro úspěšné absolvování celého Improtřesku je klubko vlny v barvě Vašeho týmu. Na co ho budete potřebovat, se dozvíte krátce po check-inu. Pokud nebudete moci vydržet napětí, můžete se s ním po cestě omotávat, vyrábět bambule, uplést si šálu nebo si z ní udělat účes, a tak propagovat svůj tým.
+
+Těm, kteří nemají ubytování v penzionu, doporučujeme karimatku a spacák.
+
+K tomu, abyste zvládli workshop po propařených večerech, se Vám bude hodit hrníček na kávu či čaj (v případě, že máte svůj oblíbený čaj, vezměte si ho také s sebou). K dispozici bude opět koutek s varnou konvicí, čajem, kávou a mlékem.
+
+Pokud budete chtít po ránu nasytit svůj žaludek, budete potřebovat nějaké nádobí a příbor. Zda zvolíte malovaný talíř po babičce, ešus, sadu příborů z nerezu, čínské hůlky, či plastová lžíce je na Vás.
+
+Těšíme se na Vás.
 
 
 <?php require('../footer.txt'); ?>
