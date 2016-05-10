@@ -15,4 +15,4 @@ http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.hotel')?
 Pokud máte nějaké dotazy, můžete rovnou odpovědět na tento e-mail.
 
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

@@ -9,4 +9,4 @@ E-mail: <?=$item->car->email?>
 
 Těšíme se na vás, jeďte bezpečně!
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

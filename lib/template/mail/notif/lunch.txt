@@ -5,4 +5,4 @@ v závislosti na tvojí přihlášce na Improtřesk 2016 ti posíláme pozvánku
 http://improtresk.cz<?=\System\Router::get_url('global', 'food.pick', array("symvar" => $symvar))?>
 
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

@@ -5,4 +5,4 @@ protože jsi v přihlášce na Improtřesk 2016 zaškrtnul ubytování v hotelu,
 http://improtresk.cz<?=\System\Router::get_url('global', 'accommodation.register', array("symvar" => $symvar))?>
 
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

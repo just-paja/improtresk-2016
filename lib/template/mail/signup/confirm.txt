@@ -31,4 +31,4 @@ Variabilní symbol: <?= $check->symvar ?>
 Do zprávy prosím uveď pro kontrolu svoje jméno.
 
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

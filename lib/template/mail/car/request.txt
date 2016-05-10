@@ -20,4 +20,4 @@ Ahoj,
 
 Těšíme se na vás, jeďte bezpečně!
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

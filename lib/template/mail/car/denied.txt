@@ -2,4 +2,4 @@ Ahoj,
 
 <?=$item->car->driver?> tě sebou nechce jako spolucestujícího na Improtřesk. Buď už má plno a nebo se mu třeba rozbilo auto. Zkus to s někým jiným :)
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

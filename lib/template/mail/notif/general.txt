@@ -13,4 +13,4 @@ Pokud budete chtít po ránu nasytit svůj žaludek, budete potřebovat nějaké
 Těšíme se na Vás.
 
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

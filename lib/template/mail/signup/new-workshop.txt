@@ -7,4 +7,4 @@ Tématem workshopu je "Vztah - čas - detail - důslednost" a je vhodný pro mí
 Těšíme se na vás za necelý měsíc v Milevsku!
 
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

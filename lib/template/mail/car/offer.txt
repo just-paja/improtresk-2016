@@ -9,4 +9,4 @@ Nyní je tvoje nabídka zveřejněná, a na odkaze níže uvidíš, jestli se n�
 
 Pokud by sis to rozmyslel, můžeš nabídku přepsat nebo rovnou smazat, ale doufáme, že se tak nestane. Až se někdo rozhodne, že se s tebou vydá na cestu za dobrodružstvím, napíšeme ti elektronický dopis, abys s ním počítal.
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>

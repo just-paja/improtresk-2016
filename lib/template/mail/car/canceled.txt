@@ -2,4 +2,4 @@ Ahoj,
 
 <?=$item->car->driver?> zrušil vaší spolujízdu na Improtřesk. Zkus to s někým jiným :)
 
-<?php require('../footer.txt'); ?>
+<?php require('lib/template/mail/footer.txt'); ?>
