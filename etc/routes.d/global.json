@@ -72,6 +72,15 @@
   },
 
   {
+    "name":"food.delivery",
+    "url":"/data/dovoz",
+    "title":"Dovoz Jidla",
+    "modules":[
+      ["stats.delivery"]
+    ]
+  },
+
+  {
     "name":"fees",
     "url":"/cena",
     "title":"Poplatky - Improtřesk 2016",

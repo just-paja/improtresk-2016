@@ -1,0 +1,9 @@
+.container
+  h1 Dovoz do hotelu
+
+  ul.list-unstyled
+    -foreach $stats as $id=>$count
+      li
+        strong.name=$foods[$id]->name
+        =' '
+        span.badge=$count
