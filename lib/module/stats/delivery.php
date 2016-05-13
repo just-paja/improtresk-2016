@@ -21,26 +21,28 @@ namespace Module\Stats
 				->fetch();
 
 			$stats = array();
-
-			foreach ($signups as $person) {
-				$food = $person->food->where(array('date' => $this::DATE))->fetch();
-
-				foreach ($food as $item) {
-					if (isset($stats[$item->id])) {
-						$stats[$item->id] += 1;
-					} else {
-						$stats[$item->id] = 1;
-					}
-				}
-			}
-
+			$default = [1,2];
 			$foods = \Food\Item::get_all()->where(array('date' => $this::DATE))->fetch();
 			$canSend = array();
 
 			foreach ($foods as $food) {
 				$canSend[$food->id] = $food;
+				$stats[$food->id] = 0;
 			}
 
+			foreach ($signups as $person) {
+				$food = $person->food->where(array('date' => $this::DATE))->fetch();
+
+				if (count($food)) {
+					foreach ($food as $item) {
+						$stats[$item->id] += 1;
+					}
+				} else {
+					foreach ($default as $item) {
+						$stats[$item] += 1;
+					}
+				}
+			}
 
 			$this->partial('stats/delivery', array(
 				"stats" => $stats,
