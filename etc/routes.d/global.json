@@ -309,6 +309,15 @@
   },
 
   {
+    "name":"mylunch",
+    "url":"/data/check-in/sign",
+    "title":"Podpisy k Checkinu",
+    "modules":[
+      ["stats.check_in"]
+    ]
+  },
+
+  {
     "name":"nonpayers",
     "url":"/data/neplatici",
     "title":"Neplatiči",

@@ -1,0 +1,18 @@
+.container
+	table.table.table-striped
+		thead
+			tr
+				th Jméno
+				th Příjmení
+				th.text-right Datum narození
+				th E-mail
+				th Podpis
+
+		tbody
+			- foreach $participants as $participant
+				tr
+					td=$participant->name_first
+					td=$participant->name_last
+					td.text-right=$participant->birthday
+					td=$participant->email
+					td(style="width: 40mm")
