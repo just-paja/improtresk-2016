@@ -35,6 +35,8 @@
 	"model-Workshop.SignUp-attr-email":"E-mail",
 	"model-Workshop.SignUp-attr-phone":"Telefon",
 	"model-Workshop.SignUp-attr-check":"Účtenka",
+	"model-Workshop.SignUp-attr-address":"Adresa trvalého bydliště",
+	"model-Workshop.SignUp-attr-id_number":"Číslo občanského průkazu",
 	"model-Workshop.SignUp-attr-workshops":"Vybrané workshopy",
 	"model-Workshop.SignUp-attr-workshop_assigned":"Přidělený workshop",
 	"model-Workshop.SignUp-attr-lunch":"Obědy",
@@ -45,6 +47,17 @@
 	"model-Workshop.SignUp-attr-solved":"Vyřízeno",
 	"model-Workshop.SignUp-attr-canceled":"Zrušeno",
 	"model-Workshop.SignUp-attr-solved-desc":"Pokud je zaškrtnuto, budou se uživateli posílat e-maily o manuálních změnách vybraného workshopu.",
+
+
+	"model-Workshop.SignUp-attr-sent_confirm":"Zasláno potvrzení o přihlášce",
+	"model-Workshop.SignUp-attr-sent_general":"Zaslány obecné informace",
+	"model-Workshop.SignUp-attr-sent_lunch":"Zaslány obědy",
+	"model-Workshop.SignUp-attr-sent_match":"Zaslány informace o velkozápase",
+	"model-Workshop.SignUp-attr-sent_workshopAdditional":"Zaslány informace o přidaném workshopu",
+	"model-Workshop.SignUp-attr-sent_hotel":"Zaslány informace o hotelu",
+	"model-Workshop.SignUp-attr-sent_hotel_update":"Zaslány aktualizace o hotelu",
+	"model-Workshop.SignUp-attr-food":"Vybrané jídlo",
+	"model-Workshop.SignUp-attr-room":"Chce být na pokoji s",
 
 
 	"model-Workshop.Check":"Účtenka",
