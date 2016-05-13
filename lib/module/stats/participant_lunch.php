@@ -6,7 +6,7 @@ namespace Module\Stats
 	{
 		public function run()
 		{
-			$ppl = \Workshop\SignUp::get_all(array("solved" => true))
+			$ppl = \Workshop\SignUp::get_all(array("solved" => true, "lunch" => true))
 				->add_filter(array(
 					"attr"    => 'id_assigned_to',
 					"type"    => 'is_null',
@@ -15,34 +15,40 @@ namespace Module\Stats
 				->sort_by('name_first, name_last')
 				->fetch();
 
-			$days = array();
+			$defaults = array(
+				'2016-05-14' => array(\Food\Item::find(1), \Food\Item::find(2)),
+				'2016-05-15' => array(\Food\Item::find(5), \Food\Item::find(7)),
+			);
+
+			$participants = array();
 			$focus = array('2016-05-14', '2016-05-15');
 
-			foreach ($focus as $date_str) {
-				$date   = new \DateTime($date_str);
-				$days[$date_str] = array(
-					"date"  => $date->format('d. m. Y'),
-					"items" => array()
-				);
+			foreach ($ppl as $person) {
+				$days = array();
 
-				foreach ($ppl as $person) {
-					$food = $person->food->where(array(
-						"date" => $date_str,
-						"type" => 2
-					))
-					->fetch_one();
+				foreach ($focus as $date_str) {
+					$date = new \DateTime($date_str);
+					$days[$date_str] = array(
+						"date"  => $date->format('d. m. Y'),
+						"items" => array(),
+						'food' => $defaults[$date->format('Y-m-d')],
+					);
+
+					$food = $person->food->where(array("date" => $date_str))->fetch();
 
 					if (any($food)) {
-						$days[$date_str]['items'][] = array(
-							"person" => $person,
-							"food"   => $food
-						);
+						$days[$date_str]['food'] = $food;
 					}
 				}
+
+				$participants[] = array(
+					"days" => $days,
+					"name" => $person->toName(),
+				);
 			}
 
 			$this->partial('stats/participant-lunch', array(
-				"days" => $days,
+				"participants" => $participants,
 			));
 		}
 	}

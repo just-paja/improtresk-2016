@@ -1,12 +1,16 @@
-.container.stats.meal-stats.meal-participants
-	.site-summary.day-list
-		ul
-			- foreach $days as $day
-				li.day
-					.day-date=$day['date']
-					table.day-items
+.container
+	.stats.meal-stats.meal-participants
+		.site-summary.day-list
+			ul.list-unstyled
+				- foreach $participants as $participant
+					li.col-md-6
+						h3=$participant['name']
 
-						- foreach $day['items'] as $item
-							tr.stat
-								td.name=$item['person']->name_first. " " . $item['person']->name_last
-								td.value=$item['food']->name
+						ul
+							- foreach $participant['days'] as $day
+								li.row
+									.col-sm-2
+										span.label.label-default.date=$day['date']
+									.col-sm-10
+										- foreach $day['food'] as $food
+											.food=$food->name
