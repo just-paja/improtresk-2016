@@ -8,7 +8,8 @@ namespace Module\Stats
 		{
 			$conds = array(
 				'paid' => true,
-				'solved' => true
+				'solved' => true,
+				'canceled' => false,
 			);
 
 			$items = \Workshop\SignUp::get_all()

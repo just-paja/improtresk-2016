@@ -46,6 +46,7 @@ namespace Workshop
 			'rules' => array("type" => 'bool'),
 			'paid'       => array("type" => 'bool'),
 			'solved'     => array("type" => 'bool'),
+			'canceled' => array("type" => 'bool'),
 
 			'sent_confirm' => array("type" => 'bool', "default" => false),
 			'sent_general' => array("type" => 'bool', "default" => false),

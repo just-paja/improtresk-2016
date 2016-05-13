@@ -30,6 +30,7 @@
 	"model-Workshop.SignUp-attr-assigned_to":"Workshop",
 	"model-Workshop.SignUp-attr-name_first":"Jméno",
 	"model-Workshop.SignUp-attr-name_last":"Příjmení",
+	"model-Workshop.SignUp-attr-birthday":"Datum narození",
 	"model-Workshop.SignUp-attr-team":"Tým",
 	"model-Workshop.SignUp-attr-email":"E-mail",
 	"model-Workshop.SignUp-attr-phone":"Telefon",
@@ -42,6 +43,7 @@
 	"model-Workshop.SignUp-attr-newsletter":"Newsletter",
 	"model-Workshop.SignUp-attr-paid":"Zaplaceno",
 	"model-Workshop.SignUp-attr-solved":"Vyřízeno",
+	"model-Workshop.SignUp-attr-canceled":"Zrušeno",
 	"model-Workshop.SignUp-attr-solved-desc":"Pokud je zaškrtnuto, budou se uživateli posílat e-maily o manuálních změnách vybraného workshopu.",
 
 

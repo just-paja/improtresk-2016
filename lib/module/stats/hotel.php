@@ -174,6 +174,7 @@ namespace Module\Stats
       $signups = \Workshop\SignUp::get_all(array(
         "hotel" => true,
         "solved" => true,
+        "canceled" => false,
       ))->fetch();
 
       $availableRoommates = array_map(function($signup) {
@@ -246,6 +247,7 @@ namespace Module\Stats
       $total = \Workshop\SignUp::count_all(array(
         "hotel" => true,
         "solved" => true,
+        "canceled" => false,
       ));
 
       $rooms = $this->fetchRooms();

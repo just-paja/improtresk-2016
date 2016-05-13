@@ -6,7 +6,7 @@ namespace Module\Stats
 	{
 		public function run()
 		{
-			$ppl = \Workshop\SignUp::get_all(array("solved" => true, "lunch" => true))
+			$ppl = \Workshop\SignUp::get_all(array("solved" => true, "lunch" => true, 'canceled' => false))
 				->add_filter(array(
 					"attr"    => 'id_assigned_to',
 					"type"    => 'is_null',

@@ -27,7 +27,8 @@ namespace Module\Stats
 				if ($item->blank) {
 					$today_picked = \Workshop\SignUp::get_all()
 						->where(array(
-							'solved' => true
+							'solved' => true,
+							'canceled' => false,
 						))
 						->join('workshop_signup_has_food_item', 'USING(id_workshop_signup)', 'wshfi', 'left')
 						->join('food_item', 'USING(id_food_item)', 'fi', 'left')

@@ -8,7 +8,8 @@ namespace Module\Stats
 		{
 			$items = \Workshop\SignUp::get_all()->where(array(
 				'paid' => false,
-				'solved' => false
+				'solved' => false,
+				'canceled' => false,
 			))->fetch();
 
 			$this->partial('stats/non-payers', array(

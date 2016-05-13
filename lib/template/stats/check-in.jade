@@ -5,6 +5,7 @@
 				th Jméno
 				th Příjmení
 				th.text-right Datum narození
+				th.text-right Přispěl
 				th E-mail
 				th Podpis
 
@@ -14,5 +15,6 @@
 					td=$participant->name_first
 					td=$participant->name_last
 					td.text-right=$participant->birthday
+					td.text-right!=$participant->check->amount.'&nbsp;Kč'
 					td=$participant->email
 					td(style="width: 40mm")
