@@ -2,15 +2,15 @@ Ahoj,
 
 přijali jsme tvojí přihlášku na Improtřesk 2016. Zde je rekapitulace:
 
-Jméno: <?=$item->name_first?> <?=$item->name_last?>
+Jméno: <?php echo $item->name_first?> <?php echo $item->name_last?>
 
-Telefon: <?=$item->phone?>
+Telefon: <?php echo $item->phone?>
 
-E-mail: <?=$item->email?>
+E-mail: <?php echo $item->email?>
 
-Obědy: <?=$item->lunch ? 'Ano':'Ne'?>
+Obědy: <?php echo $item->lunch ? 'Ano':'Ne'?>
 
-Workshopy: <?
+Workshopy: <?php
 	$name = array();
 	$x = 1;
 
@@ -21,14 +21,21 @@ Workshopy: <?
 	echo implode(', ', $name);
 ?>
 
+<?php if ($item->paid) { ?>
+
+Vaše přihláška je již označena jako zaplacená, takže nemusíte nic platit.
+
+<? } else { ?>
 
 Po uhrazení účastnického poplatku budete přiřazen na workshop. O přijetí platby tě budeme informovat automatickým e-mailem. Detaily platby jsou níže.
 
 Účet: 2800754192/2010
-Částka: <?= $check->amount ?> Kč
-Variabilní symbol: <?= $check->symvar ?>
+Částka: <?php echo  $check->amount ?> Kč
+Variabilní symbol: <?php echo  $check->symvar ?>
 
 Do zprávy prosím uveď pro kontrolu svoje jméno.
+
+<? } ?>
 
 
 <?php require('lib/template/mail/footer.txt'); ?>
