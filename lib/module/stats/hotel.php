@@ -31,12 +31,16 @@ namespace Module\Stats
       $realmates = array($signup->id);
 
       foreach ($roommates as $room) {
-        $confirm = $room->roommate->room->where(array(
-          'id_roommate' => $signup->id
-        ))->count();
+        $roommate = $room->roommate;
 
-        if ($confirm) {
-          $realmates[] = $room->roommate->id;
+        if (!$roommate->canceled) {
+          $confirm = $roommate->room->where(array(
+            'id_roommate' => $signup->id
+          ))->count();
+
+          if ($confirm) {
+            $realmates[] = $room->roommate->id;
+          }
         }
       }
 
@@ -48,8 +52,14 @@ namespace Module\Stats
       $possible = array();
 
       foreach ($ids as $id) {
-        $signup = \Workshop\SignUp::find($id);
-        $possible[] = $this->getAvailableRoommates($signup);
+        $signup = \Workshop\SignUp::get_first()->where(array(
+          "id_workshop_signup" => $id,
+          "canceled" => false,
+        ))->fetch();
+
+        if ($signup) {
+          $possible[] = $this->getAvailableRoommates($signup);
+        }
       }
 
       return array_values(
@@ -104,12 +114,6 @@ namespace Module\Stats
     public function removeIdsFromArray($array, $ids) {
       // Filter choices of besties from possible
       $array = array_filter($array, function($result) use($ids) {
-        if (!isset($result[0])) {
-          v($ids);
-          v($result);
-          exit;
-        }
-
         return !in_array($result[0], $ids);
       });
 
