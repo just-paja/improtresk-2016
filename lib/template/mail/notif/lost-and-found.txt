@@ -1,0 +1,24 @@
+Milé Improvizátorské ovečky,
+
+organizátoři mají po vašich hebkých objetích takový absťák, že si kolem napajedel již povídají o tom, jak to příští rok zařídit ještě lépe. Oproti tomu někteří loudalové teprv získali odvahu si přiznat, že už je po všem a mohli by si konečně vybalit a uklidit věci. A tak se stalo, že jsem ve svém ovčím tlumoku našel o pár předmětů více, než když jsem odjížděl.
+Prosím proto všechny ovečky, aby pro jistotu skontrolovali náš seznam ztrát a nálezů, jestli vám náhodou něco nechybí. Při té příležitosti doporučujeme sledovat Facebookovou stránku Improligy ( https://fb.com/improligacz ). Nejenže se tam každý týden dozvíte o různých improvizačních představení, ale hlavně o činnosti a fungování Improligy (a tím i o dalším Improtřesku).
+A protože se nám po vás už teď stýská, dovolte mi vás pozvat na některou z následujících super improvizačních akcí, kde se můžeme potkat.
+
+
+Festival Zpatra
+Zpatra je prvním ročníkem festivalu, jehož ambicí je svést dohromady protagonisty a diváky různých forem improvizačního divadla a propagovat tak svébytnost tohoto druhu umění. Naším dlouhodobým cílem je, aby Praha měla svůj každoroční festival, na který se sjedou improvizátoři z celého světa, aby bavili sebe i diváky, jak je tomu v jiných velkých evropských městech.
+http://zpatra.cz/
+
+
+Summer impro camp 2016
+Summer Impro Camp je letní akce pro každého, kdo se chce i přes léto rozvíjet v improvizačních dovednostech a zároveň si chce užít letní pohody.  Letos se můžete těšit na 4 špičkové lektory, kteří vás provedou světem improvizace pro osobnostní rozvoj a seznámí vás s novinkami ze zámoří. Mezi nimi skvělá Magdalena Vokáčová, která je špičkou svého oboru!
+https://www.facebook.com/events/1273854242671697/
+
+
+Improslet 2016
+Tento improvizační festival tradičně určen především pro lektory a středoškoláky se letos otevírá všem zájemcům o improvizaci. Ať už začátečníkům či pokročilým. Osobně doporučuji oficiální workshop “Hrátky s Láďou”, který začíná v pátek před půlnocí v nonstopu.
+https://www.facebook.com/events/1752760451635975/
+
+Mějte se všichni krásně a za celou Improligu a vás zdraví
+
+<?php require('lib/template/mail/footer.txt'); ?>

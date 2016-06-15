@@ -297,6 +297,40 @@ namespace Helper\Cli\Module
 				$user->save();
 			});
 		}
+
+		public function cmd_lostAndFound()
+		{
+			\System\Init::full();
+
+			$users = \Workshop\SignUp::get_all()
+				->where(array(
+					"solved" => true,
+					"newsletter" => true,
+					"sentLostAndFound" => false,
+				))
+				->fetch();
+
+			\Helper\Cli::do_over($users, function($key, $user) {
+				$ren = new \System\Template\Renderer\Txt();
+				$ren->reset_layout();
+				$ren->partial('mail/notif/lost-and-found', array(
+					"user" => $user,
+					"symvar" => $user->check->symvar,
+				));
+
+				$mail = new \Helper\Offcom\Mail(array(
+					'rcpt'     => array($user->email),
+					'subject'  => 'Improtřesk 2016 - Ztráty a nálezy, pozvánka',
+					'reply_to' => \System\Settings::get('offcom', 'default', 'reply_to'),
+					'message'  => $ren->render_content(),
+				));
+
+				$mail->send();
+
+				$user->sentLostAndFound = true;
+				$user->save();
+			});
+		}
 	}
 }
 
