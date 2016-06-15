@@ -27,6 +27,7 @@ namespace Helper\Cli\Module
 			"workshopAdditional" => array('Send notification about additional workshop to 2016'),
 			"hotel" => array('Send notification about hotel accomodation'),
 			"hotelUpdate" => array('Send update notification about hotel accomodation'),
+			"lostAndFound" => array('Send update notification about lost and found items'),
 		);
 
 
